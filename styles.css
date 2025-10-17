@@ -227,6 +227,21 @@ body {
     color: var(--white);
 }
 
+.btn-outline {
+    border: 2px solid #b24a00;
+    color: #b24a00;
+    background: transparent;
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-outline:hover {
+    background: #b24a00;
+    color: white;
+}
+
 .about {
     padding: 6rem 0;
     background-color: var(--black);
