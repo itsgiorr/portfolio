@@ -928,6 +928,6 @@ body {
 }
 
 .resume-button .btn:hover {
-  background-color: var(--cream);  /* Slightly darker on hover */
+  background-color: var(--ut-orange-dark);  /* Slightly darker on hover */
   transform: translateY(-2px);
 }
