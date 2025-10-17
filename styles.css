@@ -910,3 +910,24 @@ body {
 .about, .projects {
     background-color: var(--black);
 }
+
+/* Resume Button Styling */
+.resume-button {
+  text-align: center;       /* Centers the button horizontally */
+  margin-top: 25px;         /* Pushes it a bit lower */
+}
+
+.resume-button .btn {
+  background-color: #007bff;  /* Match your site's primary color */
+  color: white;
+  padding: 12px 28px;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.resume-button .btn:hover {
+  background-color: #0056b3;  /* Slightly darker on hover */
+  transform: translateY(-2px);
+}
