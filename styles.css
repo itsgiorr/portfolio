@@ -212,8 +212,8 @@ body {
 }
 
 .profile-image {
-    width: 220px; /* adjust size if needed */
-    height: 220px;
+    width: 400px; /* adjust size if needed */
+    height: 400px;
     border-radius: 50%; /* makes it circular */
     object-fit: cover; /* keeps proportions correct */
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.4); /* optional glow */
