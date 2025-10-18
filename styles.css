@@ -410,7 +410,7 @@ body {
 
 .project-image {
     background: linear-gradient(135deg, var(--cream) 0%, var(--cream) 100%);
-    width: 100%;
+    width: 75%;
     height: 200px;
     display: flex;
     align-items: center;
