@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Enhanced navbar shadow on scroll
+    // Navbar shadow on scroll
     window.addEventListener('scroll', function() {
         const navbar = document.querySelector('.navbar');
         if (window.scrollY > 50) {
@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    // Robot interactions
+    // Robot speech rotation logic
     const robotMessages = {
         'index.html': [
             "Welcome! I'm your guide through Jorge's portfolio. Click on the navigation above to explore!",
@@ -53,17 +53,13 @@ document.addEventListener('DOMContentLoaded', function() {
         ]
     };
 
-    // Get current page
     const currentPage = window.location.pathname.split('/').pop() || 'index.html';
-    
-    // Robot speech rotation
     let messageIndex = 0;
     const messages = robotMessages[currentPage] || robotMessages['index.html'];
-    
+
     function updateRobotSpeech() {
         if (robotSpeech && messages) {
             robotSpeech.style.animation = 'bubbleFadeOut 0.3s ease-out';
-            
             setTimeout(() => {
                 messageIndex = (messageIndex + 1) % messages.length;
                 robotSpeech.textContent = messages[messageIndex];
@@ -72,56 +68,73 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    // Change robot message every 5 seconds
     setInterval(updateRobotSpeech, 5000);
 
-    // Robot click interaction
     if (robotGuide) {
-        robotGuide.addEventListener('click', function() {
-            updateRobotSpeech();
-        });
-
-        // Add hover effect
+        robotGuide.addEventListener('click', updateRobotSpeech);
         robotGuide.style.cursor = 'pointer';
     }
-});
 
-// Add fadeOut animation
-const style = document.createElement('style');
-style.textContent = `
-    @keyframes bubbleFadeOut {
-        from { opacity: 1; transform: translateY(0); }
-        to { opacity: 0; transform: translateY(-10px); }
-    }
-`;
-document.head.appendChild(style);
+    // FadeOut animation for speech bubble
+    const style = document.createElement('style');
+    style.textContent = `
+        @keyframes bubbleFadeOut {
+            from { opacity: 1; transform: translateY(0); }
+            to { opacity: 0; transform: translateY(-10px); }
+        }
+    `;
+    document.head.appendChild(style);
 
-// ----- Project Modals -----
-document.querySelectorAll('.project-btn').forEach(button => {
-  button.addEventListener('click', () => {
-    const modalId = button.getAttribute('data-modal');
-    document.getElementById(modalId).style.display = 'flex';
-  });
-});
+    // ---------- PROJECT MODALS ----------
+    const modalButtons = document.querySelectorAll('[data-modal]'); // ✅ replaces .project-btn
+    const modals = document.querySelectorAll('.modal');
+    const closeButtons = document.querySelectorAll('.close');
 
-document.querySelectorAll('.close').forEach(closeBtn => {
-  closeBtn.addEventListener('click', () => {
-    closeBtn.closest('.modal').style.display = 'none';
-  });
-});
-
-window.addEventListener('click', e => {
-  if (e.target.classList.contains('modal')) {
-    e.target.style.display = 'none';
-  }
-});
-
-// Optional: Close modal on "Escape" key
-window.addEventListener('keydown', e => {
-  if (e.key === 'Escape') {
-    document.querySelectorAll('.modal').forEach(modal => {
-      modal.style.display = 'none';
+    // Open modal
+    modalButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const modalId = button.getAttribute('data-modal');
+            const modal = document.getElementById(modalId);
+            if (modal) {
+                modal.style.display = 'flex';
+                modal.style.animation = 'fadeInUp 0.4s ease';
+                document.body.style.overflow = 'hidden'; // prevent scroll
+            }
+        });
     });
-  }
-});
 
+    // Close modal (x button)
+    closeButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const modal = btn.closest('.modal');
+            modal.style.animation = 'fadeOutDown 0.3s ease';
+            setTimeout(() => {
+                modal.style.display = 'none';
+                document.body.style.overflow = '';
+            }, 250);
+        });
+    });
+
+    // Close modal by clicking outside
+    window.addEventListener('click', e => {
+        modals.forEach(modal => {
+            if (e.target === modal) {
+                modal.style.animation = 'fadeOutDown 0.3s ease';
+                setTimeout(() => {
+                    modal.style.display = 'none';
+                    document.body.style.overflow = '';
+                }, 250);
+            }
+        });
+    });
+
+    // Close modal with ESC key
+    window.addEventListener('keydown', e => {
+        if (e.key === 'Escape') {
+            modals.forEach(modal => {
+                modal.style.display = 'none';
+                document.body.style.overflow = '';
+            });
+        }
+    });
+});
