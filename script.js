@@ -29,52 +29,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    // ---------- ROBOT SPEECH ----------
-    const robotMessages = {
-        'index.html': [
-            "Welcome! I'm your guide through Jorge's portfolio. Click on the navigation above to explore!",
-            "Jorge is passionate about humanoid robotics - just like me!",
-            "Want to learn more? Check out the About or Projects pages!"
-        ],
-        'about.html': [
-            "Learn about Jorge's background and passion for robotics!",
-            "Jorge brings a unique Venezuelan perspective to engineering!",
-            "Did you know Jorge is interested in humanoid robotics? That's why I'm here!"
-        ],
-        'projects.html': [
-            "Check out Jorge's engineering projects and innovations!",
-            "These projects showcase Jorge's technical skills and creativity!",
-            "Impressed? Wait until you see what's coming next!"
-        ],
-        'contact.html': [
-            "Ready to connect? Reach out to Jorge here!",
-            "Jorge loves collaborating on robotics projects!",
-            "Don't be shy - send Jorge a message!"
-        ]
-    };
-
-    const currentPage = window.location.pathname.split('/').pop() || 'index.html';
-    let messageIndex = 0;
-    const messages = robotMessages[currentPage] || robotMessages['index.html'];
-
-    function updateRobotSpeech() {
-        if (robotSpeech && messages) {
-            robotSpeech.style.animation = 'bubbleFadeOut 0.3s ease-out';
-            setTimeout(() => {
-                messageIndex = (messageIndex + 1) % messages.length;
-                robotSpeech.textContent = messages[messageIndex];
-                robotSpeech.style.animation = 'bubbleFadeIn 0.5s ease-in';
-            }, 300);
-        }
-    }
-
-    setInterval(updateRobotSpeech, 5000);
-
-    if (robotGuide) {
-        robotGuide.addEventListener('click', updateRobotSpeech);
-        robotGuide.style.cursor = 'pointer';
-    }
-
     // Add fadeOut animation dynamically
     const style = document.createElement('style');
     style.textContent = `
