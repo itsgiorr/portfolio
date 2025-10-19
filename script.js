@@ -95,3 +95,33 @@ style.textContent = `
     }
 `;
 document.head.appendChild(style);
+
+// ----- Project Modals -----
+document.querySelectorAll('.project-btn').forEach(button => {
+  button.addEventListener('click', () => {
+    const modalId = button.getAttribute('data-modal');
+    document.getElementById(modalId).style.display = 'flex';
+  });
+});
+
+document.querySelectorAll('.close').forEach(closeBtn => {
+  closeBtn.addEventListener('click', () => {
+    closeBtn.closest('.modal').style.display = 'none';
+  });
+});
+
+window.addEventListener('click', e => {
+  if (e.target.classList.contains('modal')) {
+    e.target.style.display = 'none';
+  }
+});
+
+// Optional: Close modal on "Escape" key
+window.addEventListener('keydown', e => {
+  if (e.key === 'Escape') {
+    document.querySelectorAll('.modal').forEach(modal => {
+      modal.style.display = 'none';
+    });
+  }
+});
+
