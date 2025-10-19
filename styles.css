@@ -1058,11 +1058,11 @@ body {
 
 /* Individual image alignment fixes */
 .project-image.motor-removal img {
-  object-position: center;   /* moves view upward */
+  object-position: center top;   /* moves view upward */
 }
 
 .project-image.e-motor img {
-  object-position: center bottom;       /* centered normally */
+  object-position: center top;       /* centered normally */
 }
 
 .project-image.robotic-arm img {
