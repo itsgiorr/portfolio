@@ -27,16 +27,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    // Add fadeOut animation dynamically
-    const style = document.createElement('style');
-    style.textContent = `
-        @keyframes bubbleFadeOut {
-            from { opacity: 1; transform: translateY(0); }
-            to { opacity: 0; transform: translateY(-10px); }
-        }
-    `;
-    document.head.appendChild(style);
-
     // ---------- PROJECT MODALS ----------
     const modalButtons = document.querySelectorAll('[data-modal]');
     const modals = document.querySelectorAll('.modal');
@@ -90,21 +80,21 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    // ---------- IMAGE + VIDEO CAROUSEL ----------
+// ---------- IMAGE + VIDEO CAROUSEL ----------
     document.querySelectorAll('.carousel').forEach(carousel => {
         const main = carousel.querySelector('.carousel-main');
         const thumbs = carousel.querySelectorAll('.carousel-thumbs img, .carousel-thumbs video');
-
+    
         if (!main || thumbs.length === 0) return;
-
+    
         thumbs.forEach(thumb => {
             thumb.addEventListener('click', () => {
                 // Clear the main viewer completely and reset any video state
                 main.innerHTML = '';
-
+    
                 let mediaElement;
                 let mediaPromise;
-
+    
                 if (thumb.tagName.toLowerCase() === 'video') {
                     // Create a playable video
                     mediaElement = document.createElement('video');
@@ -121,7 +111,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         mediaElement.addEventListener('loadeddata', resolve, { once: true });
                         mediaElement.addEventListener('error', resolve, { once: true });
                     });
-
+    
                 } else {
                     // Create a standard image
                     mediaElement = document.createElement('img');
@@ -135,7 +125,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     
                     mediaElement.src = thumb.src;
                 }
-
+    
                 // Apply universal styling
                 mediaElement.classList.add('carousel-media');
                 mediaElement.style.opacity = '0';
@@ -146,7 +136,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 mediaElement.style.backgroundColor = '#000';
                 
                 main.appendChild(mediaElement);
-
+    
                 // Wait for media to be ready before showing
                 mediaPromise.then(() => {
                     // Force repaint for smooth transition
@@ -156,7 +146,7 @@ document.addEventListener('DOMContentLoaded', function() {
                             mediaElement.style.opacity = '1';
                         });
                     });
-
+    
                     // Highlight active thumbnail
                     thumbs.forEach(t => t.classList.remove('active-thumb'));
                     thumb.classList.add('active-thumb');
@@ -168,7 +158,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 });
             });
         });
-
+    
         // Auto-click the first thumbnail to initialize each carousel
         if (thumbs.length > 0) {
             thumbs[0].click();
