@@ -1341,3 +1341,20 @@ body {
   border-radius: 8px;
   background-color: #000;
 }
+
+/* Add to your CSS */
+.carousel-media {
+    transition: opacity 0.3s ease !important;
+}
+
+.carousel-main {
+    position: relative;
+    min-height: 400px; /* Ensure consistent height */
+}
+
+.carousel-main img,
+.carousel-main video {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
