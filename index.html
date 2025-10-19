@@ -1,431 +1,541 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Jorge Urdaneta's Portfolio</title>
-
-  <!-- Styles -->
-  <link rel="stylesheet" href="styles.css" />
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-  />
-
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
-    rel="stylesheet"
-  />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Jorge Urdaneta's Portfolio </title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
-
 <body>
-  <!-- ================= NAVBAR ================= -->
-  <nav class="navbar">
-    <div class="container">
-      <div class="nav-brand">Jorge Urdaneta</div>
-      <ul class="nav-menu">
-        <li><a href="#home" class="nav-link">Home</a></li>
-        <li><a href="#about" class="nav-link">About</a></li>
-        <li><a href="#education" class="nav-link">Resume</a></li>
-        <li><a href="#projects" class="nav-link">Projects</a></li>
-        <li><a href="#contact" class="nav-link">Contact</a></li>
-      </ul>
-      <div class="hamburger">
-        <span></span><span></span><span></span>
-      </div>
-    </div>
-  </nav>
-
-  <!-- ================= HERO ================= -->
-  <section id="home" class="hero">
-    <div class="container">
-      <div class="hero-content">
-        <div class="hero-text">
-          <h1>Jorge Urdaneta</h1>
-          <h2>Mechanical Engineering Student</h2>
-          <p>SHPE & ASCEND Leader | Robotics Enthusiast</p>
-          <div class="venezuela-accent"></div>
-          <div class="hero-buttons">
-            <a href="#contact" class="btn btn-primary">Get In Touch</a>
-            <a href="#projects" class="btn btn-secondary">View Projects</a>
-          </div>
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">Jorge Urdaneta</div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#education" class="nav-link">Resume</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </div>
-        <div class="hero-image">
-          <img
-            src="profile.png"
-            alt="Portrait of Jorge Urdaneta"
-            class="profile-image"
-            loading="lazy"
-          />
-        </div>
-      </div>
-    </div>
-  </section>
+    </nav>
 
-  <!-- ================= ABOUT ================= -->
-  <section id="about" class="about">
-    <div class="container">
-      <h2 class="section-title">About Me</h2>
-      <div class="about-content">
-        <div class="about-text">
-          <p>
-            Hello! I'm Jorge Urdaneta, a Venezuelan-born mechanical engineer at
-            UT driven by curiosity, challenge, and impact. Moving to the U.S. at
-            15, I've navigated cultures, led student organizations, managed
-            projects, and I'm building an autonomous flying ATV. My mindset is
-            to always grow and give back.
-          </p>
-          <p>
-            My passion is robotics: designing autonomous systems that make life
-            easier, safer, and better for people. Whether in the form of a car
-            that keeps you safe or a humanoid that assists you — I want to build
-            it and make an impact.
-          </p>
-          <p>
-            I pursue every project with purpose, grateful for the opportunities
-            the world has given me. My goal is to repay that generosity through
-            meaningful innovation that lasts generations.
-          </p>
-          <p>
-            Outside of academics and robotics, I love soccer, hiking, traveling,
-            trying new foods, fashion, and painting shoes. I’m always exploring
-            new ways to blend creativity and engineering.
-          </p>
-          <p>I truly believe personality can take you a long way.</p>
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>Jorge Urdaneta</h1>
+                    <h2>Mechanical Engineering Student</h2>
+                    <p>SHPE & ASCEND Leader | Robotics Enthusiast</p>
+                    <div class="venezuela-accent"></div>
+                    <div class="hero-buttons">
+                        <a href="#contact" class="btn btn-primary">Get In Touch</a>
+                        <a href="#projects" class="btn btn-secondary">View Projects</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="profile.png" alt="Jorge Urdaneta" class="profile-image">
+                </div>
+            </div>
         </div>
+    </section>
 
-        <div class="about-stats">
-          <div class="stat-card yellow-accent">
-            <i class="fas fa-graduation-cap"></i>
-            <h3>Education</h3>
-            <p>Mechanical Engineering</p>
-          </div>
-          <div class="stat-card blue-accent">
-            <i class="fas fa-home"></i>
-            <h3>Home</h3>
-            <p>Venezuela → Florida → Texas</p>
-          </div>
-          <div class="stat-card red-accent">
-            <i class="fas fa-heart"></i>
-            <h3>Goal</h3>
-            <p>Designing assistive technology for people through Robotics</p>
-          </div>
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Hello! I'm Jorge Urdaneta, a Venezuelan-born mechanical engineer at UT driven by curiosity, challenge, and impact. Moving to the U.S. at 15, I've navigated cultures, led student organizations, managed projects, and I'm building an autonomous flying ATV. My mindset is to always try to grow and find a way to give back.</p>
+                    <p>My passion is robotics: designing autonomous systems that make life easier, safer, and better for people. Whether that is in the shape of a car that keeps you safe, or a humanoid that assists you, I want to be the one to build it and change someone's life.</p>
+                    <p>I pursue every project with purpose, grateful for the doors the world has opened for me throughout my path. I'm determined to repay the generosity and kidness of the world through meaningful innovation that will impact lives for ages.</p>
+                    <p></p>
+                    <p>Outside of academics, leading, and robotics, I'm passionate about exploring the world and expressing myself creatively. I enjoy soccer, hiking, trying new foods, travelling, fashion, and painting shoes. I'm always looking for ways to combine style, culture, and expressing myself.</p>
+                    <p>I truly believe personality can take you a long way.</p>
+                </div>
+                <div class="about-stats">
+                    <div class="stat-card yellow-accent">
+                        <i class="fas fa-graduation-cap"></i>
+                        <h3>Education</h3>
+                        <p>Mechanical Engineering</p>
+                    </div>
+                    <div class="stat-card blue-accent">
+                        <i class="fas fa-home"></i>
+                        <h3>Home</h3>
+                        <p>Venezuela → Florida → Texas</p>
+                    </div>
+                    <div class="stat-card red-accent">
+                        <i class="fas fa-heart"></i>
+                        <h3>Goal</h3>
+                        <p>Designing assistive technology for people through Robotics</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+<section id="education" class="education">
+  <div class="container">
+    <h2 class="section-title">Education</h2>
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-marker"></div>
+        <div class="timeline-content">
+          <h3>Associates of Science in Engineering</h3>
+          <h4>Midland College</h4>
+          <p class="timeline-date">Graduated with Honors: May 2023 - GPA: 3.9</p>
+          <p>Completed core engineering courses including Statics, Dynamics, Differential Equations</p>
         </div>
       </div>
-    </div>
-  </section>
-
-  <!-- ================= EDUCATION ================= -->
-  <section id="education" class="education">
-    <div class="container">
-      <h2 class="section-title">Education</h2>
-      <div class="timeline">
-        <div class="timeline-item">
-          <div class="timeline-marker"></div>
-          <div class="timeline-content">
-            <h3>Associates of Science in Engineering</h3>
-            <h4>Midland College</h4>
-            <p class="timeline-date">Graduated with Honors — May 2023 | GPA: 3.9</p>
-            <p>
-              Completed foundational courses: Statics, Dynamics, Differential
-              Equations.
-            </p>
-          </div>
-        </div>
-
-        <div class="timeline-item">
-          <div class="timeline-marker"></div>
-          <div class="timeline-content">
-            <h3>Bachelor of Science in Mechanical Engineering</h3>
-            <h4>The University of Texas at Austin</h4>
-            <p class="timeline-date">
-              Expected Graduation: Dec 2026 | GPA: 3.3
-            </p>
-            <p>
-              Relevant Coursework: Robotics Mechanism Design, Mechatronics,
-              Biomechanics, Heat Transfer.
-            </p>
-          </div>
+      <div class="timeline-item">
+        <div class="timeline-marker"></div>
+        <div class="timeline-content">
+          <h3>Bachelors of Science in Mechanical Engineering</h3>
+          <h4>The University of Texas at Austin</h4>
+          <p class="timeline-date">Expected Graduation: Dec 2026 - GPA: 3.3</p>
+          <p>Relevant Coursework: Robotics Mechanism Design, Biomechanics of Human Movement, Mechatronics, Heat Transfer</p>
         </div>
       </div>
     </div>
+  </div>
 
-    <div class="container">
-      <h2 class="section-title">Technical Experience</h2>
-      <div class="skills-grid">
-        <div class="skill-category">
-          <h3><i class="fas fa-motorcycle"></i> ASCEND Texas</h3>
-          <ul>
-            <li>Program Manager — May 2025–Present</li>
-            <li>Leading a team developing a flying ATV prototype.</li>
-          </ul>
-        </div>
+  <div class="container">
+    <h2 class="section-title">Technical Experience</h2>
+    <div class="skills-grid">
+      <div class="skill-category">
+        <h3><i class="fas fa-motorcycle"></i> ASCEND Texas</h3>
+        <ul>
+          <li><span class="skill-name">Program Manager</span></li>
+          <li><span class="skill-name">May 2025 - Present</span></li>
+          <li><span class="skill-name">Leading a team looking to take off</span></li>
+          <li><span class="skill-name">to the skies on an ATV</span></li>
+        </ul>
+      </div>
 
-        <div class="skill-category">
-          <h3><i class="fas fa-plane"></i> Boeing</h3>
-          <ul>
-            <li>Manufacturing Engineering Intern — June–Sept 2025</li>
-            <li>Team: 777–777X Systems | Subteam: Flight Deck Ops</li>
-          </ul>
-        </div>
+      <div class="skill-category">
+        <h3><i class="fas fa-plane"></i> Boeing</h3>
+        <ul>
+          <li><span class="skill-name">Manufacturing Engineering Intern</span></li>
+          <li><span class="skill-name">June 2025 - Sept 2025</span></li>
+          <li><span class="skill-name">Team: 777-777X Systems</span></li>
+          <li><span class="skill-name">Subteam: Special Ops - Flight Deck</span></li>
+        </ul>
+      </div>
 
-        <div class="skill-category">
-          <h3><i class="fas fa-cogs"></i> ASCEND Design</h3>
-          <ul>
-            <li>Mechanical Design Engineer — Sept 2024–May 2025</li>
-            <li>Subteam: Electric Motor Integration</li>
-          </ul>
-        </div>
+      <div class="skill-category">
+        <h3><i class="fas fa-cogs"></i> ASCEND Design</h3>
+        <ul>
+          <li><span class="skill-name">Mechanical Design Engineer</span></li>
+          <li><span class="skill-name">Sept 2024 - May 2025</span></li>
+          <li><span class="skill-name">Team: Mechanical Design</span></li>
+          <li><span class="skill-name">Subteam: Electrical Motor Implementation</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <h2 class="section-title">Skills</h2>
+    <div class="skills-grid">
+      <div class="skill-category">
+        <h3><i class="fas fa-desktop"></i> Software</h3>
+        <ul>
+          <li><span class="skill-name">Python</span></li>
+          <li><span class="skill-name">MATLAB</span></li>
+          <li><span class="skill-name">CATIA V5</span></li>
+          <li><span class="skill-name">SolidWorks</span></li>
+          <li><span class="skill-name">OnShape</span></li>
+          <li><span class="skill-name">ideaMaker</span></li>
+          <li><span class="skill-name">Bambu Studio</span></li>
+        </ul>
+      </div>
+
+      <div class="skill-category">
+        <h3><i class="fas fa-wrench"></i> Hardware</h3>
+        <ul>
+          <li><span class="skill-name">CNC Machining</span></li>
+          <li><span class="skill-name">Manual Milling</span></li>
+          <li><span class="skill-name">Welding</span></li>
+          <li><span class="skill-name">Sensor Integration</span></li>
+        </ul>
+      </div>
+
+      <div class="skill-category">
+        <h3><i class="fas fa-pencil"></i> Mechanical Design</h3>
+        <ul>
+          <li><span class="skill-name">GD&T</span></li>
+          <li><span class="skill-name">Design for Manufacturing (DFM)</span></li>
+          <li><span class="skill-name">FEA</span></li>
+        </ul>
       </div>
     </div>
 
-    <div class="container">
-      <h2 class="section-title">Skills</h2>
-      <div class="skills-grid">
-        <div class="skill-category">
-          <h3><i class="fas fa-desktop"></i> Software</h3>
-          <ul>
-            <li>Python</li>
-            <li>MATLAB</li>
-            <li>CATIA V5</li>
-            <li>SolidWorks</li>
-            <li>OnShape</li>
-            <li>ideaMaker</li>
-            <li>Bambu Studio</li>
-          </ul>
+    <div class="resume-button">
+      <a href="jorge_urdaneta_resume.pdf" class="btn btn-primary" download>Download My Resume</a>
+    </div>
+  </div>
+</section>
+
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title">Featured Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="hud.png" alt="777X HUD" class="project-image">
+                    </div>
+                    <div class="project-content">
+                        <h3>Inspection Tool for 777X HUD</h3>
+                        <p>Developed a prototype inspection tool that mounts onto the HUD aligning tool to verify hard point positioning. The tool detected deviations up to 10 thousandths of an inch, ensuring compliance with engineering drawings and tolerances.</p>
+                        <div class="project-tags">
+                            <span class="tag">CATIA</span>
+                            <span class="tag">GD&T</span>
+                            <span class="tag">Precision Measurement</span>
+                            <span class="tag">Quality Assurance</span>
+                            <span class="tag">Design for Manufacturing (DFM)</span>
+                        </div>
+                        
+                        <button class="btn btn-secondary" data-modal="modal-HUD">More</button>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <i class="fas fa-wind"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>New Economy Seat Tray</h3>
+                        <p>Designed a passenger-friendly economy seat tray featuring a collapsible drink holder to reduce and control spills with an integrated phone stand, all within standard tray dimensions.</p>
+                        <div class="project-tags">
+                            <span class="tag">CATIA</span>
+                            <span class="tag">Prototyping & Fabrication</span>
+                            <span class="tag">Design for User Experience</span>
+                            <span class="tag">Design for Manufacturing (DFM)</span>
+                        </div>
+
+                        <button class="btn btn-secondary" data-modal="modal-tray">More</button>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="avionics.png" alt="ATV with Avionics Enclosure" class="project-image">
+                    </div>
+                    <div class="project-content">
+                        <h3>Avionics Enclosure</h3>
+                        <p>Created a protective enclosure for the ATV's avionics, addressing wiring management, airflow, and EMI shielding.</p>
+                        <div class="project-tags">
+                            <span class="tag">OnShape</span>
+                            <span class="tag">Laser Cutting</span>
+                            <span class="tag">Thermal Management & Airflow</span>
+                            <span class="tag">Design for Manufacturing (DFM)</span>
+                        </div>
+                        
+                        <button class="btn btn-secondary" data-modal="modal-avionics">More</button>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image motor-removal">
+                        <img src="removal.png" alt="Gas Motor Removal on ATV" class="project-image">
+                    </div>
+                    <div class="project-content">
+                        <h3>ATV Gas Motor Removal</h3>
+                        <p>Performed full gas motor removal and prepared the ATV for electric motor integration, ensuring optimal component layout and accessibility.</p>
+                        <div class="project-tags">
+                            <span class="tag">Mechanical Disassembly</span>
+                            <span class="tag">System Layout & Optimization</span>
+                        </div>
+
+                        <button class="btn btn-secondary" data-modal="modal-removal">More</button>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image e-motor">
+                        <img src="emotor.png" alt="E-Motor ATV" class="project-image">
+                    </div>
+                    <div class="project-content">
+                        <h3>ATV E-Motor Mount</h3>
+                        <p>Designed and welded a custom mount to suspend the electric motor, freeing space for other criticla components while enabling gear chain tension adjustment.</p>
+                        <div class="project-tags">
+                            <span class="tag">Structural Design</span>
+                            <span class="tag">Welding</span>
+                            <span class="tag">Prototyping & Iteration</span>
+                            <span class="tag">Space Optimization</span>
+                        </div>
+
+                        <button class="btn btn-secondary" data-modal="modal-emotor">More</button>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image robotic-arm">
+                        <img src="hand.png" alt="Robotic Arm CAD" class="project-image">
+                    </div>
+                    <div class="project-content">
+                        <h3>Robotic Hand</h3>
+                        <p>CAD-designed a functional robotic arm for personal prosthetic research and general robotics experimentation.</p>
+                        <div class="project-tags">
+                            <span class="tag">OnShape</span>
+                            <span class="tag">Robotics Mechanism Design</span>
+                            <span class="tag">Prototyping</span>
+                            <span class="tag">Design for Manufacturing</span>
+                        </div>
+
+                        <button class="btn btn-secondary" data-modal="modal-arm">More</button>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                      <video autoplay loop muted playsinline>
+                        <source src="bowling.mov" type="video/mp4">
+                        Your browser does not support the video tag.
+                      </video>
+                    </div>
+                    <div class="project-content">
+                        <h3>Mini Bowling Table Game</h3>
+                        <p>Designed and fabricated a four-bar linkage mechanism simulating wrist-arm motion for a tabletop bowling game.</p>
+                        <div class="project-tags">
+                            <span class="tag">Mechanism Kinematics</span>
+                            <span class="tag">Kinematic Analysis</span>
+                            <span class="tag">Matlab</span>
+                            <span class="tag">Python</span>
+                        </div>
+
+                        <button class="btn btn-secondary" data-modal="modal-bowling">More</button>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="rccar.png" alt="RC Car" class="project-image">
+                    </div>
+                    <div class="project-content">
+                        <h3>RC Car</h3>
+                        <p>CAD-designed an RC car chassis to fit motorized wheels, developed the servo-motor circuit for wheel control, and programmed autonomous movements for class testing.</p>
+                        <div class="project-tags">
+                            <span class="tag">SolidWorks</span>
+                            <span class="tag">Motor Integration</span>
+                            <span class="tag">Python</span>
+                        </div>
+
+                        <button class="btn btn-secondary" data-modal="modal-rc">More</button>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                      <video autoplay loop muted playsinline>
+                        <source src="slider.mov" type="video/mp4">
+                        Your browser does not support the video tag.
+                      </video>
+                    </div>
+                    <div class="project-content">
+                        <h3>Slider Crank Mechanism</h3>
+                        <p>Designed and laser-cut a slider-crank mechanism to lift a 1 lb weight.</p>
+                        <div class="project-tags">
+                            <span class="tag">Mechanism Design</span>
+                            <span class="tag">SolidWorks</span>
+                            <span class="tag">Prototyping & Fabrication</span>
+                        </div>
+
+                        <button class="btn btn-secondary" data-modal="modal-slider">More</button>
+                    </div>
+                </div>
+            </div>
         </div>
+    </section>
 
-        <div class="skill-category">
-          <h3><i class="fas fa-wrench"></i> Hardware</h3>
-          <ul>
-            <li>CNC & Manual Machining</li>
-            <li>Welding</li>
-            <li>Sensor Integration</li>
-          </ul>
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-content">
+                <div class="contact-text">
+                    <p>Open to exciting opportunities in robotics, mechanical engineering, or innovative projects. I thrive under pressure and bring energy and a positive outlook to every challenge. Reach out!</p>
+                </div>
+                <div class="contact-links">
+                    <a href="mailto:jeurd24@gmail.com" class="contact-link">
+                        <i class="fas fa-envelope"></i>
+                        <span>jeurd24@gmail.com</span>
+                    </a>
+                    <a href="https://linkedin.com/in/jorgeurd" target="_blank" class="contact-link">
+                        <i class="fab fa-linkedin"></i>
+                        <span>LinkedIn Profile</span>
+                    </a>
+                </div>
+            </div>
         </div>
+    </section>
 
-        <div class="skill-category">
-          <h3><i class="fas fa-pencil"></i> Mechanical Design</h3>
-          <ul>
-            <li>GD&T</li>
-            <li>Design for Manufacturing (DFM)</li>
-            <li>FEA</li>
-          </ul>
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Jorge Urdaneta. All rights reserved.</p>
+            <div class="venezuela-pride">
+                <span class="flag-stripe yellow"></span>
+                <span class="flag-stripe blue"></span>
+                <span class="flag-stripe red"></span>
+            </div>
         </div>
-      </div>
+    </footer>
 
-      <div class="resume-button">
-        <a href="jorge_urdaneta_resume.pdf" class="btn btn-primary" download>
-          Download My Resume
-        </a>
-      </div>
-    </div>
-  </section>
+    <script src="script.js"></script>
 
-  <!-- ================= PROJECTS ================= -->
-  <section id="projects" class="projects">
-    <div class="container">
-      <h2 class="section-title">Featured Projects</h2>
-
-      <div class="projects-grid">
-        <!-- Project cards (kept identical to your version) -->
-        <!-- HUD, Tray, Avionics, Removal, E-Motor, Robotic Arm, Bowling, RC Car, Slider -->
-      </div>
-    </div>
-  </section>
-
-  <!-- ================= CONTACT ================= -->
-  <section id="contact" class="contact">
-    <div class="container">
-      <h2 class="section-title">Get In Touch</h2>
-      <p>
-        Open to opportunities in robotics and mechanical design. I bring
-        creativity, persistence, and leadership to every challenge.
-      </p>
-
-      <div class="contact-links">
-        <a href="mailto:jeurd24@gmail.com" class="contact-link">
-          <i class="fas fa-envelope"></i><span>jeurd24@gmail.com</span>
-        </a>
-        <a
-          href="https://linkedin.com/in/jorgeurd"
-          target="_blank"
-          class="contact-link"
-        >
-          <i class="fab fa-linkedin"></i><span>LinkedIn Profile</span>
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ================= FOOTER ================= -->
-  <footer class="footer">
-    <div class="container">
-      <p>&copy; 2025 Jorge Urdaneta. All rights reserved.</p>
-      <div class="venezuela-pride">
-        <span class="flag-stripe yellow"></span>
-        <span class="flag-stripe blue"></span>
-        <span class="flag-stripe red"></span>
-      </div>
-    </div>
-  </footer>
-
-  <!-- ================= SCRIPTS ================= -->
-  <script src="script.js"></script>
-
-  <!-- ===================== MODALS ===================== -->
-
-<!-- HUD Modal -->
+    <!-- HUD Modal -->
 <div id="modal-HUD" class="modal">
   <div class="modal-content large">
-    <span class="close" aria-label="Close">&times;</span>
+    <span class="close">&times;</span>
     <h2>Inspection Tool for 777X Heads-Up Display (HUD)</h2>
 
-    <img src="hud.png" alt="777X Heads-Up Display inspection tool">
+    <img src="hud.png" alt="777X HUD">
 
     <h3>Skills Used</h3>
     <div class="project-tags">
-      <span class="tag">CATIA</span>
-      <span class="tag">GD&T</span>
-      <span class="tag">Precision Measurement</span>
-      <span class="tag">Quality Assurance</span>
-      <span class="tag">Design for Manufacturing (DFM)</span>
+        <span class="tag">CATIA</span>
+        <span class="tag">GD&T</span>
+        <span class="tag">Precision Measurement</span>
+        <span class="tag">Quality Assurance</span>
+        <span class="tag">Design for Manufacturing (DFM)</span>
     </div>
 
     <h3>Project Overview</h3>
     <p>
-      Developed a precision inspection tool that mounts onto the HUD alignment fixture to verify
-      hard-point positioning within ±0.010 in, ensuring engineering-drawing compliance and
-      process repeatability.
+      This project involved complete gas motor removal and preparation for electric motor integration. 
+      I redesigned the layout to ensure accessibility and optimized drivetrain alignment.
     </p>
 
     <h3>Design Process</h3>
-    <p>Designed in CATIA, fabricated from aluminum plate, validated via CMM measurement.</p>
+    <p>Hola</p>
   </div>
 </div>
 
 <!-- Seat Tray Modal -->
 <div id="modal-tray" class="modal">
   <div class="modal-content large">
-    <span class="close" aria-label="Close">&times;</span>
+    <span class="close">&times;</span>
     <h2>Economy Seat Tray</h2>
 
-    <div class="carousel">
-      <div class="carousel-main">
-        <img src="tray.png" class="active" alt="Economy seat tray render 1">
-      </div>
-      <div class="carousel-thumbs">
-        <img src="tray.png" alt="Tray view 1">
-        <img src="tray2.png" alt="Tray view 2">
-        <img src="tray3.png" alt="Tray view 3">
-      </div>
+    <div class = "carousel">
+        <div class = "carousel-main">
+            <img src="tray.png" class = "active" alt = "Seat Tray 1">
+        </div>
+        <div class="carousel-thumbs">
+            <img src="tray.png" alt="Seat Tray 1">
+            <img src="tray2.png" alt="Seat Tray 2">
+            <img src="tray3.png" alt="Seat Tray 3">
+        </div>
     </div>
 
     <h3>Skills Used</h3>
     <div class="project-tags">
-      <span class="tag">CATIA</span>
-      <span class="tag">Prototyping</span>
-      <span class="tag">User-Centered Design</span>
-      <span class="tag">DFM</span>
+        <span class="tag">CATIA</span>
+        <span class="tag">Prototyping & Fabrication</span>
+        <span class="tag">Design for User Experience</span>
+        <span class="tag">Design for Manufacturing (DFM)</span>
     </div>
 
     <h3>Project Overview</h3>
     <p>
-      Designed a passenger-friendly seat tray featuring a collapsible drink holder and integrated
-      phone stand while meeting dimensional constraints for economy seating.
+      This project involved complete gas motor removal and preparation for electric motor integration. 
+      I redesigned the layout to ensure accessibility and optimized drivetrain alignment.
     </p>
 
     <h3>Design Process</h3>
-    <p>Iterated low-fidelity mock-ups, conducted ergonomic testing, finalized geometry in CATIA.</p>
+    <p>Hola</p>
   </div>
 </div>
 
 <!-- Avionics Modal -->
 <div id="modal-avionics" class="modal">
   <div class="modal-content large">
-    <span class="close" aria-label="Close">&times;</span>
+    <span class="close">&times;</span>
     <h2>ATV Avionics Enclosure</h2>
 
-    <div class="carousel">
-      <div class="carousel-main">
-        <img src="avionics.png" class="active" alt="Avionics enclosure render 1">
-      </div>
-      <div class="carousel-thumbs">
-        <img src="avionics.png" alt="Avionics 1">
-        <img src="avionics2.png" alt="Avionics 2">
-        <img src="avionics3.png" alt="Avionics 3">
-      </div>
+    <div class = "carousel">
+        <div class = "carousel-main">
+            <img src="avionics.png" class = "active" alt = "Avionics 1">
+        </div>
+        <div class="carousel-thumbs">
+            <img src="avionics.png" alt="Avionics 1">
+            <img src="avionics2.png" alt="Avionics 2">
+            <img src="avionics3.png" alt="Avionics 3">
+        </div>
     </div>
 
     <h3>Skills Used</h3>
     <div class="project-tags">
-      <span class="tag">OnShape</span>
-      <span class="tag">Laser Cutting</span>
-      <span class="tag">Thermal & Airflow Design</span>
-      <span class="tag">DFM</span>
+        <span class="tag">OnShape</span>
+        <span class="tag">Laser Cutting</span>
+        <span class="tag">Thermal Management & Airflow</span>
+        <span class="tag">Design for Manufacturing (DFM)</span>
     </div>
 
     <h3>Project Overview</h3>
     <p>
-      Developed a protective avionics housing ensuring wiring organization, airflow cooling,
-      and EMI shielding for the autonomous flying ATV.
+      This project involved complete gas motor removal and preparation for electric motor integration. 
+      I redesigned the layout to ensure accessibility and optimized drivetrain alignment.
     </p>
 
     <h3>Design Process</h3>
-    <p>Modeled in OnShape, manufactured with acrylic + aluminum, verified via airflow simulation.</p>
+    <p>Hola</p>
   </div>
 </div>
 
-<!-- Gas Motor Removal Modal -->
+<!-- Gas Motor Modal -->
 <div id="modal-removal" class="modal">
   <div class="modal-content large">
-    <span class="close" aria-label="Close">&times;</span>
+    <span class="close">&times;</span>
     <h2>ATV Gas Motor Removal</h2>
 
-    <div class="carousel">
-      <div class="carousel-main">
-        <img src="removal.png" class="active" alt="Gas motor removal 1">
-      </div>
-      <div class="carousel-thumbs">
-        <img src="removal.png" alt="Removal 1">
-        <img src="removal2.png" alt="Removal 2">
-        <img src="removal3.png" alt="Removal 3">
-      </div>
+    <div class = "carousel">
+        <div class = "carousel-main">
+            <img src="removal.png" class = "active" alt = "Removal 1">
+        </div>
+        <div class="carousel-thumbs">
+            <img src="removal.png" alt="Removal 1">
+            <img src="removal2.png" alt="Removal 2">
+            <img src="removal3.png" alt="Removal 3">
+        </div>
     </div>
 
     <h3>Skills Used</h3>
     <div class="project-tags">
-      <span class="tag">Mechanical Disassembly</span>
-      <span class="tag">System Optimization</span>
+        <span class="tag">Mechanical Disassembly</span>
+        <span class="tag">System Layout & Optimization</span>
     </div>
 
     <h3>Project Overview</h3>
-    <p>Performed full combustion-engine removal and prepped ATV chassis for electric-drive integration.</p>
+    <p>
+      This project involved complete gas motor removal and preparation for electric motor integration. 
+      I redesigned the layout to ensure accessibility and optimized drivetrain alignment.
+    </p>
 
     <h3>Design Process</h3>
-    <p>Mapped drivetrain interfaces, documented wire harnesses, validated clearances for new motor mount.</p>
+    <p>Hola</p>
   </div>
 </div>
 
 <!-- E-Motor Modal -->
 <div id="modal-emotor" class="modal">
   <div class="modal-content large">
-    <span class="close" aria-label="Close">&times;</span>
+    <span class="close">&times;</span>
     <h2>ATV Electrical Motor Implementation</h2>
 
     <div class="carousel">
+      <!-- Main display area -->
       <div class="carousel-main">
-        <img src="emotor.png" class="active" alt="E-Motor mount render 1">
+        <!-- Default first item (can be image or video) -->
+        <img src="emotor.png" class="active" alt="E-Motor 1">
       </div>
+
+      <!-- Thumbnails / selectors -->
       <div class="carousel-thumbs">
-        <img src="emotor.png" alt="E-Motor 1">
-        <video src="emotor.mov" muted playsinline></video>
-        <video src="emotor4.mov" muted playsinline></video>
-        <img src="emotor3.png" alt="E-Motor 3">
-        <video src="emotor2.mov" muted playsinline></video>
+        <img src="emotor.png" data-type="image" alt="E-Motor 1">
+        <video data-type="video" src="emotor.mov" muted playsinline></video>
+        <video data-type="video" src="emotor4.mov" muted playsinline></video>
+        <img src="emotor3.png" data-type="image" alt="E-Motor 3">
+        <video data-type="video" src="emotor2.mov" muted playsinline></video>
       </div>
     </div>
 
@@ -438,163 +548,177 @@
     </div>
 
     <h3>Project Overview</h3>
-    <p>
-      Designed and welded a custom electric-motor mount allowing chain-tension adjustment and
-      optimized component layout.
-    </p>
+    <p>Designed and implemented the electric motor system for the ATV, ensuring optimal layout, accessibility, and power transfer efficiency.</p>
 
     <h3>Design Process</h3>
-    <p>Modeled in OnShape, TIG-welded steel brackets, vibration-tested under load.</p>
+    <p>Hola</p>
   </div>
 </div>
-
+    
 <!-- Robotic Arm Modal -->
 <div id="modal-arm" class="modal">
   <div class="modal-content large">
-    <span class="close" aria-label="Close">&times;</span>
+    <span class="close">&times;</span>
     <h2>Robotic Hand</h2>
 
-    <div class="carousel">
-      <div class="carousel-main">
-        <img src="hand.png" class="active" alt="Robotic hand render 1">
-      </div>
-      <div class="carousel-thumbs">
-        <img src="hand.png" alt="Hand 1">
-        <img src="hand2.png" alt="Hand 2">
-        <img src="hand3.png" alt="Hand 3">
-        <img src="hand4.png" alt="Hand 4">
-        <img src="hand5.png" alt="Hand 5">
-      </div>
+    <div class = "carousel">
+        <div class = "carousel-main">
+            <img src="hand.png" class = "active" alt = "HUD 1">
+        </div>
+        <div class="carousel-thumbs">
+            <img src="hand.png" alt="Robotic Hand 1">
+            <img src="hand2.png" alt="Robotic Hand 2">
+            <img src="hand3.png" alt="Robotic Hand 3">
+            <img src="hand4.png" alt="Robotic Hand 4">
+            <img src="hand5.png" alt="Robotic Hand 5">
+        </div>
     </div>
 
     <h3>Skills Used</h3>
     <div class="project-tags">
-      <span class="tag">OnShape</span>
-      <span class="tag">Robotics Mechanism Design</span>
-      <span class="tag">Prototyping</span>
-      <span class="tag">DFM</span>
+        <span class="tag">OnShape</span>
+        <span class="tag">Robotics Mechanism Design</span>
+        <span class="tag">Prototyping</span>
+        <span class="tag">Design for Manufacturing</span>
     </div>
 
     <h3>Project Overview</h3>
-    <p>CAD-designed a functional 5-DOF robotic hand for prosthetic and control-system research.</p>
+    <p>
+      This project involved complete gas motor removal and preparation for electric motor integration. 
+      I redesigned the layout to ensure accessibility and optimized drivetrain alignment.
+    </p>
 
     <h3>Design Process</h3>
-    <p>Parameterized linkage design, printed PLA prototype, servo integration testing under Matlab control.</p>
+    <p>Hola</p>
   </div>
 </div>
 
 <!-- Bowling Modal -->
 <div id="modal-bowling" class="modal">
   <div class="modal-content large">
-    <span class="close" aria-label="Close">&times;</span>
-    <h2>Mini Bowling – Table Game</h2>
+    <span class="close">&times;</span>
+    <h2>Mini Bowling - Table Game</h2>
 
     <div class="carousel">
+      <!-- Main display area -->
       <div class="carousel-main">
-        <video src="bowling.mov" autoplay loop muted playsinline></video>
+        <!-- Default first item (can be image or video) -->
+        <video data-type="video" src="bowling.mov" class="active" alt="Bowling Video">
       </div>
+
+      <!-- Thumbnails / selectors -->
       <div class="carousel-thumbs">
-        <video src="bowling.mov" muted playsinline></video>
-        <img src="bowling.png" alt="Prototype photo 1">
-        <video src="bowling2.mov" muted playsinline></video>
-        <img src="bowling2.png" alt="Prototype photo 2">
-        <img src="bowling6.png" alt="CAD drawing">
-        <img src="bowling7.png" alt="Kinematic diagram">
-        <video src="bowling5.mov" muted playsinline></video>
-        <img src="bowling.gif" alt="Mechanism motion GIF">
-        <video src="bowling3.mov" muted playsinline></video>
-        <video src="bowling4.mov" muted playsinline></video>
-        <video src="bowling6.mov" muted playsinline></video>
-        <img src="bowling9.png" alt="Simulation 1">
-        <img src="bowling10.png" alt="Simulation 2">
-        <img src="bowling11.png" alt="Simulation 3">
+        <video data-type="video" src="bowling.mov" muted playsinline></video>
+        <img src="bowling.png" data-type="image" alt="Prototype">
+        <video data-type="video" src="bowling2.mov" muted playsinline></video>
+        <img src="bowling2.png" data-type="image" alt="Prototype">
+        <img src="bowling6.png" data-type="image" alt="Drawing">
+        <img src="bowling7.png" data-type="image" alt="Kinematics">
+        <video data-type="video" src="bowling5.mov" muted playsinline></video>
+        <img src="bowling.gif" data-type="gif" alt="Motion">
+        <video data-type="video" src="bowling3.mov" muted playsinline></video>
+        <video data-type="video" src="bowling4.mov" muted playsinline></video>
+        <video data-type="video" src="bowling6.mov" muted playsinline></video>
+        <img src="bowling9.png" data-type="image" alt="Kinematics">
+        <img src="bowling10.png" data-type="image" alt="Kinematics">
+        <img src="bowling11.png" data-type="image" alt="Kinematics">
       </div>
     </div>
 
     <h3>Skills Used</h3>
     <div class="project-tags">
-      <span class="tag">Mechanism Kinematics</span>
-      <span class="tag">Kinematic Analysis</span>
-      <span class="tag">MATLAB</span>
-      <span class="tag">Python</span>
+        <span class="tag">Mechanism Kinematics</span>
+        <span class="tag">Kinematic Analysis</span>
+        <span class="tag">Matlab</span>
+        <span class="tag">Python</span>
     </div>
 
     <h3>Project Overview</h3>
     <p>
-      Designed and fabricated a four-bar linkage that simulates wrist motion for a table-top bowling game.
+      This project involved complete gas motor removal and preparation for electric motor integration. 
+      I redesigned the layout to ensure accessibility and optimized drivetrain alignment.
     </p>
 
     <h3>Design Process</h3>
-    <p>Modeled motion profiles in MATLAB, 3D-printed linkages, validated throw trajectory experimentally.</p>
+    <p>Hola</p>
   </div>
 </div>
 
 <!-- RC Car Modal -->
 <div id="modal-rc" class="modal">
   <div class="modal-content large">
-    <span class="close" aria-label="Close">&times;</span>
+    <span class="close">&times;</span>
     <h2>RC Car</h2>
 
-    <div class="carousel">
-      <div class="carousel-main">
-        <img src="rccar.png" class="active" alt="RC car chassis render 1">
-      </div>
-      <div class="carousel-thumbs">
-        <img src="rccar.png" alt="RC 1">
-        <img src="rccar2.png" alt="RC 2">
-        <img src="rccar3.png" alt="RC 3">
-        <img src="rccar4.png" alt="RC 4">
-        <img src="rccar5.png" alt="RC 5">
-        <img src="rccar6.png" alt="RC 6">
-      </div>
+    <div class = "carousel">
+        <div class = "carousel-main">
+            <img src="rccar.png" class = "active" alt = "HUD 1">
+        </div>
+        <div class="carousel-thumbs">
+            <img src="rccar.png" alt="RC Car 1">
+            <img src="rccar2.png" alt="RC Car 2">
+            <img src="rccar3.png" alt="RC Car 3">
+            <img src="rccar4.png" alt="RC Car 4">
+            <img src="rccar5.png" alt="RC Car 5">
+            <img src="rccar6.png" alt="RC Car 6">
+        </div>
     </div>
 
     <h3>Skills Used</h3>
     <div class="project-tags">
-      <span class="tag">SolidWorks</span>
-      <span class="tag">Motor Integration</span>
-      <span class="tag">Python</span>
+        <span class="tag">SolidWorks</span>
+        <span class="tag">Motor Integration</span>
+        <span class="tag">Python</span>
     </div>
 
     <h3>Project Overview</h3>
-    <p>CAD-designed an RC chassis with servo steering and autonomous path programming in Python.</p>
+    <p>
+      This project involved complete gas motor removal and preparation for electric motor integration. 
+      I redesigned the layout to ensure accessibility and optimized drivetrain alignment.
+    </p>
 
     <h3>Design Process</h3>
-    <p>Assembled electronics breadboard, validated wheel alignment and signal response loop.</p>
+    <p>Hola</p>
   </div>
 </div>
 
 <!-- Slider Crank Modal -->
 <div id="modal-slider" class="modal">
   <div class="modal-content large">
-    <span class="close" aria-label="Close">&times;</span>
+    <span class="close">&times;</span>
     <h2>Slider Crank Mechanism</h2>
 
     <div class="carousel">
+      <!-- Main display area -->
       <div class="carousel-main">
-        <video src="slider.mov" autoplay loop muted playsinline></video>
+        <!-- Default first item (can be image or video) -->
+        <video data-type="video" src="slider.mov" class="active" alt="Slider Crank Video">
       </div>
+
+      <!-- Thumbnails / selectors -->
       <div class="carousel-thumbs">
-        <video src="slider.mov" muted playsinline></video>
-        <video src="slider2.mov" muted playsinline></video>
+        <video data-type="video" src="slider.mov" muted playsinline></video>
+        <video data-type="video" src="slider2.mov" muted playsinline></video>
       </div>
     </div>
 
     <h3>Skills Used</h3>
     <div class="project-tags">
-      <span class="tag">Mechanism Design</span>
-      <span class="tag">SolidWorks</span>
-      <span class="tag">Prototyping & Fabrication</span>
+        <span class="tag">Mechanism Design</span>
+        <span class="tag">SolidWorks</span>
+        <span class="tag">Prototyping & Fabrication</span>
     </div>
 
     <h3>Project Overview</h3>
-    <p>Laser-cut and assembled an acrylic slider-crank mechanism capable of lifting a 1 lb load.</p>
+    <p>
+      This project involved complete gas motor removal and preparation for electric motor integration. 
+      I redesigned the layout to ensure accessibility and optimized drivetrain alignment.
+    </p>
 
     <h3>Design Process</h3>
-    <p>Analyzed link forces via MATLAB, fabricated with CO₂ laser, validated motion via high-speed video.</p>
+    <p>Hola</p>
   </div>
 </div>
-
-
+    
 </body>
 </html>
