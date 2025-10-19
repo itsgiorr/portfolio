@@ -1058,7 +1058,7 @@ body {
 
 /* Individual image alignment fixes */
 .project-image.motor-removal img {
-  object-position: center top;   /* moves view upward */
+  object-position: center bottom;   /* moves view upward */
 }
 
 .project-image.e-motor img {
@@ -1066,7 +1066,7 @@ body {
 }
 
 .project-image.robotic-arm img {
-  object-position: center bottom; /* moves view downward */
+  object-position: center top; /* moves view downward */
 }
 
 /* ---- MODAL STYLES ---- */
