@@ -1244,3 +1244,66 @@ body {
   font-size: 0.9rem;           /* proportional text */
   border-radius: 9999px;       /* rounded pill shape */
 }
+
+/* ---------- LARGE MODAL STYLING ---------- */
+.modal-content.large {
+  max-width: 900px;
+  padding: 2.5rem;
+}
+
+/* ---------- IMAGE CAROUSEL ---------- */
+.carousel {
+  margin: 1.5rem 0 2rem;
+}
+
+.carousel-main {
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+}
+
+.carousel-main img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: none;
+}
+
+.carousel-main img.active {
+  display: block;
+}
+
+.carousel-thumbs {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+
+.carousel-thumbs img {
+  width: 90px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 6px;
+  cursor: pointer;
+  opacity: 0.6;
+  transition: all 0.3s ease;
+}
+
+.carousel-thumbs img:hover,
+.carousel-thumbs img.active-thumb {
+  opacity: 1;
+  transform: scale(1.05);
+  border: 2px solid var(--ut-orange);
+}
+
+/* Headings inside modal */
+.modal-content h3 {
+  color: var(--ut-orange);
+  margin-top: 2rem;
+  margin-bottom: 0.8rem;
+  font-size: 1.2rem;
+}
