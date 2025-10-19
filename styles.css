@@ -1068,3 +1068,78 @@ body {
 .project-image.robotic-arm img {
   object-position: center bottom; /* moves view downward */
 }
+
+/* ---- MODAL STYLES ---- */
+
+.modal {
+  display: none;                /* Hidden by default */
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(6px);
+  justify-content: center;
+  align-items: center;
+  overflow-y: auto;
+  padding: 2rem;
+}
+
+.modal-content {
+  background: var(--cream);
+  border-radius: 20px;
+  max-width: 700px;
+  width: 90%;
+  padding: 2rem 2.5rem;
+  position: relative;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  animation: fadeInUp 0.35s ease;
+}
+
+.modal-content img {
+  width: 100%;
+  border-radius: 12px;
+  margin: 1rem 0 1.5rem;
+  object-fit: cover;
+}
+
+.modal-content h2 {
+  color: var(--ut-orange);
+  margin-bottom: 0.5rem;
+}
+
+.modal-content p, 
+.modal-content li {
+  color: #222;
+  line-height: 1.6;
+}
+
+.modal-content ul {
+  margin-top: 0.8rem;
+  padding-left: 1.2rem;
+}
+
+.close {
+  position: absolute;
+  top: 14px;
+  right: 18px;
+  font-size: 1.8rem;
+  color: var(--ut-orange);
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.close:hover {
+  transform: scale(1.2);
+}
+
+/* Animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
