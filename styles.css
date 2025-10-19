@@ -1212,3 +1212,35 @@ body {
   align-self: flex-start; /* keeps alignment consistent */
   margin-top: auto;       /* pushes button to the bottom */
 }
+
+/* --- PROJECT CARD BUTTON POSITION FIX --- */
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+/* ensures all internal content stacks cleanly */
+.project-content {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: space-between;
+}
+
+/* keeps spacing between tags and button consistent */
+.project-tags {
+  margin-bottom: 1.5rem; /* adds clean gap */
+}
+
+/* centers and anchors button at bottom */
+.project-content .btn {
+  align-self: center;          /* centers horizontally */
+  margin-top: auto;            /* pushes to bottom */
+  margin-bottom: 1rem;         /* gives breathing room from card edge */
+  padding: 8px 20px;           /* smaller, sleeker button look */
+  font-size: 0.9rem;           /* proportional text */
+  border-radius: 9999px;       /* rounded pill shape */
+}
