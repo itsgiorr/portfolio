@@ -157,5 +157,5 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         });
     });
-});
 // Ensure the closing '});' for document.addEventListener('DOMContentLoaded', function() { is still at the very end of the file.
+});
