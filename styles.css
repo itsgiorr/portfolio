@@ -1188,3 +1188,27 @@ body {
   color: #fff;
   transform: translateY(-2px);
 }
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* already helps distribute space */
+  height: 100%;
+}
+
+.project-content {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;          /* makes it stretch evenly */
+}
+
+.project-tags {
+  margin-bottom: auto;   /* pushes everything below it down */
+}
+
+.btn,
+.btn-primary,
+.btn-secondary {
+  align-self: flex-start; /* keeps alignment consistent */
+  margin-top: auto;       /* pushes button to the bottom */
+}
