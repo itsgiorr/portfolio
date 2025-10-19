@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const robotSpeech = document.getElementById('robotSpeech');
     const robotGuide = document.getElementById('robotGuide');
 
-    // Mobile menu toggle
+    // ---------- MOBILE MENU ----------
     if (hamburger) {
         hamburger.addEventListener('click', function() {
             navMenu.classList.toggle('active');
@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    // Robot speech rotation logic
+    // ---------- ROBOT SPEECH ----------
     const robotMessages = {
         'index.html': [
             "Welcome! I'm your guide through Jorge's portfolio. Click on the navigation above to explore!",
@@ -75,7 +75,7 @@ document.addEventListener('DOMContentLoaded', function() {
         robotGuide.style.cursor = 'pointer';
     }
 
-    // FadeOut animation for speech bubble
+    // Add fadeOut animation dynamically
     const style = document.createElement('style');
     style.textContent = `
         @keyframes bubbleFadeOut {
@@ -86,7 +86,7 @@ document.addEventListener('DOMContentLoaded', function() {
     document.head.appendChild(style);
 
     // ---------- PROJECT MODALS ----------
-    const modalButtons = document.querySelectorAll('[data-modal]'); // ✅ replaces .project-btn
+    const modalButtons = document.querySelectorAll('[data-modal]');
     const modals = document.querySelectorAll('.modal');
     const closeButtons = document.querySelectorAll('.close');
 
@@ -98,12 +98,12 @@ document.addEventListener('DOMContentLoaded', function() {
             if (modal) {
                 modal.style.display = 'flex';
                 modal.style.animation = 'fadeInUp 0.4s ease';
-                document.body.style.overflow = 'hidden'; // prevent scroll
+                document.body.style.overflow = 'hidden'; // prevent background scroll
             }
         });
     });
 
-    // Close modal (x button)
+    // Close modal (×)
     closeButtons.forEach(btn => {
         btn.addEventListener('click', () => {
             const modal = btn.closest('.modal');
@@ -136,5 +136,24 @@ document.addEventListener('DOMContentLoaded', function() {
                 document.body.style.overflow = '';
             });
         }
+    });
+
+    // ---------- IMAGE CAROUSEL ----------
+    document.querySelectorAll('.carousel').forEach(carousel => {
+        const mainImage = carousel.querySelector('.carousel-main img');
+        const thumbs = carousel.querySelectorAll('.carousel-thumbs img');
+
+        if (!mainImage || thumbs.length === 0) return;
+
+        thumbs.forEach(thumb => {
+            thumb.addEventListener('click', () => {
+                // Update main image source
+                mainImage.src = thumb.src;
+
+                // Highlight active thumbnail
+                thumbs.forEach(t => t.classList.remove('active-thumb'));
+                thumb.classList.add('active-thumb');
+            });
+        });
     });
 });
