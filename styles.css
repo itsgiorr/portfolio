@@ -1055,3 +1055,16 @@ body {
     font-size: 0.9rem;
   }
 }
+
+/* Individual image alignment fixes */
+.project-image.motor-removal img {
+  object-position: center top;   /* moves view upward */
+}
+
+.project-image.e-motor img {
+  object-position: center;       /* centered normally */
+}
+
+.project-image.robotic-arm img {
+  object-position: center bottom; /* moves view downward */
+}
