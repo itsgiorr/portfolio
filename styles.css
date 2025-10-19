@@ -1150,3 +1150,41 @@ body {
     transform: translateY(0);
   }
 }
+
+/* ---------- Project Card Layout Fix ---------- */
+
+/* Ensures button stays anchored near the bottom of the card */
+.project-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+/* Tag layout stays consistent and spaced from the button */
+.project-card .tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem; /* space before button */
+}
+
+/* More Info button styling — consistent bubble look */
+.more-info-btn {
+  background-color: #fff8f0; /* match your light card tone */
+  color: #ea580c; /* same orange tone as tags */
+  border: 2px solid #ea580c;
+  border-radius: 9999px;
+  font-weight: 600;
+  padding: 0.4rem 1rem;
+  font-size: 0.9rem;
+  align-self: flex-start; /* keeps it left aligned like tags */
+  transition: all 0.2s ease;
+  margin-top: auto; /* pushes to bottom */
+}
+
+.more-info-btn:hover {
+  background-color: #ea580c;
+  color: #fff;
+  transform: translateY(-2px);
+}
