@@ -91,52 +91,71 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
 // ---------- IMAGE + VIDEO CAROUSEL ----------
-    document.querySelectorAll('.carousel').forEach(carousel => {
-        const main = carousel.querySelector('.carousel-main');
-        const thumbs = carousel.querySelectorAll('.carousel-thumbs img, .carousel-thumbs video');
-    
-        if (!main || thumbs.length === 0) return;
-    
-        thumbs.forEach(thumb => {
-            thumb.addEventListener('click', () => {
-                // Clear the main viewer completely
-                main.innerHTML = '';
-    
-                let mediaElement;
-    
-                if (thumb.tagName.toLowerCase() === 'video') {
-                    // Create a playable video
-                    mediaElement = document.createElement('video');
-                    const source = thumb.querySelector('source') ? thumb.querySelector('source').src : thumb.src;
-                    mediaElement.src = source;
-                    mediaElement.autoplay = true;
-                    mediaElement.loop = true;
-                    mediaElement.muted = true;
-                    mediaElement.playsInline = true;
-                } else {
-                    // Create a standard image
-                    mediaElement = document.createElement('img');
-                    mediaElement.src = thumb.src;
-                    mediaElement.alt = thumb.alt || 'carousel image';
-                }
-    
-                // Apply universal styling
-                mediaElement.classList.add('carousel-media');
-                main.appendChild(mediaElement);
-    
-                // Force repaint to prevent white flashes
-                requestAnimationFrame(() => {
-                    mediaElement.style.opacity = '0';
-                    mediaElement.style.transition = 'opacity 0.3s ease';
-                    requestAnimationFrame(() => {
-                        mediaElement.style.opacity = '1';
+    document.querySelectorAll('.carousel').forEach(carousel => {
+        const main = carousel.querySelector('.carousel-main');
+        const thumbs = carousel.querySelectorAll('.carousel-thumbs img, .carousel-thumbs video');
+    
+        if (!main || thumbs.length === 0) return;
+    
+        thumbs.forEach(thumb => {
+            thumb.addEventListener('click', () => {
+                // Clear the main viewer completely
+                main.innerHTML = '';
+    
+                let mediaElement;
+                let mediaPromise; // Promise to track media loading
+    
+                if (thumb.tagName.toLowerCase() === 'video') {
+                    // Create a playable video
+                    mediaElement = document.createElement('video');
+                    const source = thumb.querySelector('source') ? thumb.querySelector('source').src : thumb.src;
+                    mediaElement.src = source;
+                    mediaElement.autoplay = true;
+                    mediaElement.loop = true;
+                    mediaElement.muted = true;
+                    mediaElement.playsInline = true;
+
+                        // Video load is usually fast enough, resolve immediately for now
+                        mediaPromise = Promise.resolve();
+
+                } else {
+                    // Create a standard image
+                    mediaElement = document.createElement('img');
+                    mediaElement.alt = thumb.alt || 'carousel image';
+                    
+                    // Create a promise that resolves when the image is loaded
+                    mediaPromise = new Promise(resolve => {
+                        mediaElement.addEventListener('load', resolve, { once: true });
+                        mediaElement.addEventListener('error', resolve, { once: true }); // Resolve even on error
                     });
+                    
+                    // Set the src AFTER attaching the listener
+                    mediaElement.src = thumb.src; 
+                }
+    
+                // Apply universal styling
+                mediaElement.classList.add('carousel-media');
+                // Set initial opacity to 0 to hide it until it's ready to fade in
+                mediaElement.style.opacity = '0'; 
+                main.appendChild(mediaElement);
+    
+                // Wait for the media (image or video) to be ready before fading in
+                mediaPromise.then(() => {
+                    // Force repaint using requestAnimationFrame for smooth transition
+                    requestAnimationFrame(() => {
+                        // Apply the transition property here (or in CSS)
+                        mediaElement.style.transition = 'opacity 0.3s ease'; 
+                        requestAnimationFrame(() => {
+                            mediaElement.style.opacity = '1';
+                        });
+                    });
+
+                    // Highlight active thumbnail
+                    thumbs.forEach(t => t.classList.remove('active-thumb'));
+                    thumb.classList.add('active-thumb');
                 });
-    
-                // Highlight active thumbnail
-                thumbs.forEach(t => t.classList.remove('active-thumb'));
-                thumb.classList.add('active-thumb');
-            });
-        });
-    });
+            });
+        });
+    });
 });
+// Ensure the closing '});' for document.addEventListener('DOMContentLoaded', function() { is still at the very end of the file.
