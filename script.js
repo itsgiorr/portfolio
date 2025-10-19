@@ -138,17 +138,42 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    // ---------- IMAGE CAROUSEL ----------
+    // ---------- IMAGE + VIDEO CAROUSEL ----------
     document.querySelectorAll('.carousel').forEach(carousel => {
-        const mainImage = carousel.querySelector('.carousel-main img');
-        const thumbs = carousel.querySelectorAll('.carousel-thumbs img');
+        const main = carousel.querySelector('.carousel-main');
+        const thumbs = carousel.querySelectorAll('.carousel-thumbs img, .carousel-thumbs video');
 
-        if (!mainImage || thumbs.length === 0) return;
+        if (!main || thumbs.length === 0) return;
 
         thumbs.forEach(thumb => {
             thumb.addEventListener('click', () => {
-                // Update main image source
-                mainImage.src = thumb.src;
+                // Clear existing main content
+                main.innerHTML = '';
+
+                // Handle video thumbnails
+                if (thumb.tagName.toLowerCase() === 'video') {
+                    const newVid = document.createElement('video');
+                    newVid.src = thumb.src;
+                    newVid.autoplay = true;
+                    newVid.loop = true;
+                    newVid.muted = true;
+                    newVid.playsInline = true;
+                    newVid.style.width = '100%';
+                    newVid.style.height = '100%';
+                    newVid.style.objectFit = 'cover';
+                    main.appendChild(newVid);
+                }
+                // Handle image thumbnails
+                else {
+                    const newImg = document.createElement('img');
+                    newImg.src = thumb.src;
+                    newImg.alt = thumb.alt || 'carousel image';
+                    newImg.classList.add('active');
+                    newImg.style.width = '100%';
+                    newImg.style.height = '100%';
+                    newImg.style.objectFit = 'cover';
+                    main.appendChild(newImg);
+                }
 
                 // Highlight active thumbnail
                 thumbs.forEach(t => t.classList.remove('active-thumb'));
