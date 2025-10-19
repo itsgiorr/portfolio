@@ -1,8 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
     const hamburger = document.querySelector('.hamburger');
     const navMenu = document.querySelector('.nav-menu');
-    const robotSpeech = document.getElementById('robotSpeech');
-    const robotGuide = document.getElementById('robotGuide');
 
     // ---------- MOBILE MENU ----------
     if (hamburger) {
