@@ -1062,15 +1062,11 @@ body {
 }
 
 .project-image.e-motor img {
-  object-position: center;       /* centered normally */
+  object-position: center bottom;       /* centered normally */
 }
 
 .project-image.robotic-arm img {
   object-position: center top; /* moves view downward */
-}
-
-.project-image.mount img {
-  object-position: center;   /* moves view upward */
 }
 
 /* ---- MODAL STYLES ---- */
