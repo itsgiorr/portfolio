@@ -158,9 +158,8 @@ document.addEventListener('DOMContentLoaded', function() {
                     newVid.loop = true;
                     newVid.muted = true;
                     newVid.playsInline = true;
-                    newVid.style.width = '100%';
-                    newVid.style.height = '100%';
-                    newVid.style.objectFit = 'cover';
+                    newVid.classList.add('carousel-media');
+                    newImg.classList.add('carousel-media');
                     main.appendChild(newVid);
                 }
                 // Handle image thumbnails
@@ -169,9 +168,8 @@ document.addEventListener('DOMContentLoaded', function() {
                     newImg.src = thumb.src;
                     newImg.alt = thumb.alt || 'carousel image';
                     newImg.classList.add('active');
-                    newImg.style.width = '100%';
-                    newImg.style.height = '100%';
-                    newImg.style.objectFit = 'cover';
+                    newVid.classList.add('carousel-media');
+                    newImg.classList.add('carousel-media');
                     main.appendChild(newImg);
                 }
 
