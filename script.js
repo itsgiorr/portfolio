@@ -92,39 +92,36 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    // ---------- IMAGE + VIDEO CAROUSEL ----------
-    document.querySelectorAll('.carousel').forEach(carousel => {
-        const main = carousel.querySelector('.carousel-main');
-        const thumbs = carousel.querySelectorAll('.carousel-thumbs img, .carousel-thumbs video');
+// ---------- IMAGE + VIDEO CAROUSEL ----------
+document.querySelectorAll('.carousel').forEach(carousel => {
+    const main = carousel.querySelector('.carousel-main');
+    const thumbs = carousel.querySelectorAll('.carousel-thumbs img, .carousel-thumbs video');
 
-        if (!main || thumbs.length === 0) return;
+    if (!main || thumbs.length === 0) return;
 
-        thumbs.forEach(thumb => {
-            thumb.addEventListener('click', () => {
-                // Clear existing main content
-                main.innerHTML = '';
+    thumbs.forEach(thumb => {
+        thumb.addEventListener('click', () => {
+            main.innerHTML = '';
 
-                if (thumb.tagName.toLowerCase() === 'video') {
-                    const newVid = document.createElement('video');
-                    newVid.src = thumb.src;
-                    newVid.autoplay = true;
-                    newVid.loop = true;
-                    newVid.muted = true;
-                    newVid.playsInline = true;
-                    newVid.classList.add('carousel-media');
-                    main.appendChild(newVid);
-                } else {
-                    const newImg = document.createElement('img');
-                    newImg.src = thumb.src;
-                    newImg.alt = thumb.alt || 'carousel image';
-                    newImg.classList.add('carousel-media');
-                    main.appendChild(newImg);
-                }
+            if (thumb.tagName.toLowerCase() === 'video') {
+                const newVid = document.createElement('video');
+                newVid.src = thumb.querySelector('source') ? thumb.querySelector('source').src : thumb.src;
+                newVid.autoplay = true;
+                newVid.loop = true;
+                newVid.muted = true;
+                newVid.playsInline = true;
+                newVid.classList.add('carousel-media');
+                main.appendChild(newVid);
+            } else {
+                const newImg = document.createElement('img');
+                newImg.src = thumb.src;
+                newImg.alt = thumb.alt || 'carousel image';
+                newImg.classList.add('carousel-media');
+                main.appendChild(newImg);
+            }
 
-                // Highlight active thumbnail
-                thumbs.forEach(t => t.classList.remove('active-thumb'));
-                thumb.classList.add('active-thumb');
-            });
+            thumbs.forEach(t => t.classList.remove('active-thumb'));
+            thumb.classList.add('active-thumb');
         });
     });
 });
