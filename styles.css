@@ -1307,3 +1307,20 @@ body {
   margin-bottom: 0.8rem;
   font-size: 1.2rem;
 }
+
+.carousel-thumbs video {
+  width: 90px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 6px;
+  cursor: pointer;
+  opacity: 0.6;
+  transition: all 0.3s ease;
+}
+
+.carousel-thumbs video:hover,
+.carousel-thumbs video.active-thumb {
+  opacity: 1;
+  transform: scale(1.05);
+  border: 2px solid var(--ut-orange);
+}
