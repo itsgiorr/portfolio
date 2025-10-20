@@ -1432,3 +1432,22 @@ body {
     transform: scale(1.05);
     border: 2px solid #BF5700;
 }
+
+.carousel-item img,
+.carousel-item video {
+  display: block;
+  object-fit: cover;          /* Ensures consistent cropping */
+  width: 194px;               /* Your thumbnail width */
+  height: 108px;              /* Your thumbnail height */
+  border-radius: 10px;
+  margin: 0 auto;
+  background-color: #000;     /* Prevents transparency flicker for videos */
+}
+
+.carousel-item {
+  flex: 0 0 auto;
+  margin: 0 10px;             /* Equal spacing between ALL media */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
