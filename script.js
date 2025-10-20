@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const modals = document.querySelectorAll('.modal');
     const closeButtons = document.querySelectorAll('.close');
 
-    // Open modal - SIMPLIFIED VERSION
+    // Open modal
     modalButtons.forEach(button => {
         button.addEventListener('click', () => {
             const modalId = button.getAttribute('data-modal');
@@ -41,16 +41,15 @@ document.addEventListener('DOMContentLoaded', function() {
                 modal.style.display = 'flex';
                 document.body.style.overflow = 'hidden';
                 
-                // Initialize carousel for this modal
+                // Initialize carousel for this modal if it has one
                 initializeCarousel(modal);
             }
         });
     });
 
-    // Close modal (×) - SIMPLIFIED VERSION
+    // Close modal (×)
     closeButtons.forEach(btn => {
-        btn.addEventListener('click', (e) => {
-            e.stopPropagation();
+        btn.addEventListener('click', () => {
             const modal = btn.closest('.modal');
             modal.style.display = 'none';
             document.body.style.overflow = '';
@@ -80,22 +79,23 @@ document.addEventListener('DOMContentLoaded', function() {
     // ---------- CAROUSEL FUNCTION ----------
     function initializeCarousel(modal) {
         const carousel = modal.querySelector('.carousel');
-        if (!carousel) return;
+        if (!carousel) return; // Some modals don't have carousels
 
         const main = carousel.querySelector('.carousel-main');
         const thumbs = carousel.querySelectorAll('.carousel-thumbs img, .carousel-thumbs video');
 
         if (!main || thumbs.length === 0) return;
 
-        // Clear any existing click listeners to prevent duplicates
-        thumbs.forEach(thumb => {
-            thumb.replaceWith(thumb.cloneNode(true));
-        });
+        // Clear main area first
+        main.innerHTML = '';
 
-        const newThumbs = carousel.querySelectorAll('.carousel-thumbs img, .carousel-thumbs video');
+        // Add click listeners to thumbnails
+        thumbs.forEach((thumb, index) => {
+            // Remove existing listeners by cloning
+            const newThumb = thumb.cloneNode(true);
+            thumb.parentNode.replaceChild(newThumb, thumb);
 
-        newThumbs.forEach(thumb => {
-            thumb.addEventListener('click', function() {
+            newThumb.addEventListener('click', function() {
                 // Clear main area
                 main.innerHTML = '';
 
@@ -117,7 +117,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
 
                 // Apply styles
-                mediaElement.classList.add('carousel-media');
                 mediaElement.style.width = '100%';
                 mediaElement.style.height = '100%';
                 mediaElement.style.objectFit = 'contain';
@@ -127,21 +126,14 @@ document.addEventListener('DOMContentLoaded', function() {
                 main.appendChild(mediaElement);
 
                 // Update active thumbnails
-                newThumbs.forEach(t => t.classList.remove('active-thumb'));
+                thumbs.forEach(t => t.classList.remove('active-thumb'));
                 this.classList.add('active-thumb');
             });
+
+            // Auto-click first thumbnail
+            if (index === 0) {
+                newThumb.click();
+            }
         });
-
-        // Auto-click first thumbnail
-        if (newThumbs.length > 0) {
-            newThumbs[0].click();
-        }
     }
-
-    // Initialize carousels in any already-open modals (in case page loads with modal open)
-    document.querySelectorAll('.modal').forEach(modal => {
-        if (modal.style.display === 'flex') {
-            initializeCarousel(modal);
-        }
-    });
 });
