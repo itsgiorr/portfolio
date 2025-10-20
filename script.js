@@ -32,136 +32,116 @@ document.addEventListener('DOMContentLoaded', function() {
     const modals = document.querySelectorAll('.modal');
     const closeButtons = document.querySelectorAll('.close');
 
-    // Open modal
+    // Open modal - SIMPLIFIED VERSION
     modalButtons.forEach(button => {
         button.addEventListener('click', () => {
             const modalId = button.getAttribute('data-modal');
             const modal = document.getElementById(modalId);
             if (modal) {
                 modal.style.display = 'flex';
-                modal.style.animation = 'fadeInUp 0.4s ease';
-                document.body.style.overflow = 'hidden'; // prevent background scroll
+                document.body.style.overflow = 'hidden';
+                
+                // Initialize carousel for this modal
+                initializeCarousel(modal);
             }
         });
     });
 
-    // Close modal (×)
+    // Close modal (×) - SIMPLIFIED VERSION
     closeButtons.forEach(btn => {
-        btn.addEventListener('click', () => {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
             const modal = btn.closest('.modal');
-            modal.style.animation = 'fadeOutDown 0.3s ease';
-            setTimeout(() => {
-                modal.style.display = 'none';
-                document.body.style.overflow = '';
-            }, 250);
+            modal.style.display = 'none';
+            document.body.style.overflow = '';
         });
     });
 
     // Close modal by clicking outside
     window.addEventListener('click', e => {
-        modals.forEach(modal => {
-            if (e.target === modal) {
-                modal.style.animation = 'fadeOutDown 0.3s ease';
-                setTimeout(() => {
-                    modal.style.display = 'none';
-                    document.body.style.overflow = '';
-                }, 250);
-            }
-        });
+        if (e.target.classList.contains('modal')) {
+            e.target.style.display = 'none';
+            document.body.style.overflow = '';
+        }
     });
 
     // Close modal with ESC key
     window.addEventListener('keydown', e => {
         if (e.key === 'Escape') {
             modals.forEach(modal => {
-                modal.style.display = 'none';
-                document.body.style.overflow = '';
+                if (modal.style.display === 'flex') {
+                    modal.style.display = 'none';
+                    document.body.style.overflow = '';
+                }
             });
         }
     });
 
-// ---------- IMAGE + VIDEO CAROUSEL ----------
-    document.querySelectorAll('.carousel').forEach(carousel => {
+    // ---------- CAROUSEL FUNCTION ----------
+    function initializeCarousel(modal) {
+        const carousel = modal.querySelector('.carousel');
+        if (!carousel) return;
+
         const main = carousel.querySelector('.carousel-main');
         const thumbs = carousel.querySelectorAll('.carousel-thumbs img, .carousel-thumbs video');
-    
+
         if (!main || thumbs.length === 0) return;
-    
+
+        // Clear any existing click listeners to prevent duplicates
         thumbs.forEach(thumb => {
-            thumb.addEventListener('click', () => {
-                // Clear the main viewer completely and reset any video state
+            thumb.replaceWith(thumb.cloneNode(true));
+        });
+
+        const newThumbs = carousel.querySelectorAll('.carousel-thumbs img, .carousel-thumbs video');
+
+        newThumbs.forEach(thumb => {
+            thumb.addEventListener('click', function() {
+                // Clear main area
                 main.innerHTML = '';
-    
+
                 let mediaElement;
-                let mediaPromise;
-    
-                if (thumb.tagName.toLowerCase() === 'video') {
-                    // Create a playable video
+                const isVideo = this.tagName.toLowerCase() === 'video';
+
+                if (isVideo) {
                     mediaElement = document.createElement('video');
-                    const source = thumb.getAttribute('src');
-                    mediaElement.src = source;
-                    mediaElement.controls = false;
+                    mediaElement.src = this.src;
                     mediaElement.autoplay = true;
                     mediaElement.loop = true;
                     mediaElement.muted = true;
                     mediaElement.playsInline = true;
-                    
-                    // Video ready promise
-                    mediaPromise = new Promise(resolve => {
-                        mediaElement.addEventListener('loadeddata', resolve, { once: true });
-                        mediaElement.addEventListener('error', resolve, { once: true });
-                    });
-    
+                    mediaElement.controls = false;
                 } else {
-                    // Create a standard image
                     mediaElement = document.createElement('img');
-                    mediaElement.alt = thumb.alt || 'carousel image';
-                    
-                    // Image load promise
-                    mediaPromise = new Promise(resolve => {
-                        mediaElement.addEventListener('load', resolve, { once: true });
-                        mediaElement.addEventListener('error', resolve, { once: true });
-                    });
-                    
-                    mediaElement.src = thumb.src;
+                    mediaElement.src = this.src;
+                    mediaElement.alt = this.alt || 'Carousel image';
                 }
-    
-                // Apply universal styling
+
+                // Apply styles
                 mediaElement.classList.add('carousel-media');
-                mediaElement.style.opacity = '0';
                 mediaElement.style.width = '100%';
                 mediaElement.style.height = '100%';
                 mediaElement.style.objectFit = 'contain';
                 mediaElement.style.borderRadius = '8px';
                 mediaElement.style.backgroundColor = '#000';
-                
+
                 main.appendChild(mediaElement);
-    
-                // Wait for media to be ready before showing
-                mediaPromise.then(() => {
-                    // Force repaint for smooth transition
-                    requestAnimationFrame(() => {
-                        mediaElement.style.transition = 'opacity 0.3s ease';
-                        requestAnimationFrame(() => {
-                            mediaElement.style.opacity = '1';
-                        });
-                    });
-    
-                    // Highlight active thumbnail
-                    thumbs.forEach(t => t.classList.remove('active-thumb'));
-                    thumb.classList.add('active-thumb');
-                }).catch(() => {
-                    // Fallback: show immediately even if load fails
-                    mediaElement.style.opacity = '1';
-                    thumbs.forEach(t => t.classList.remove('active-thumb'));
-                    thumb.classList.add('active-thumb');
-                });
+
+                // Update active thumbnails
+                newThumbs.forEach(t => t.classList.remove('active-thumb'));
+                this.classList.add('active-thumb');
             });
         });
-    
-        // Auto-click the first thumbnail to initialize each carousel
-        if (thumbs.length > 0) {
-            thumbs[0].click();
+
+        // Auto-click first thumbnail
+        if (newThumbs.length > 0) {
+            newThumbs[0].click();
+        }
+    }
+
+    // Initialize carousels in any already-open modals (in case page loads with modal open)
+    document.querySelectorAll('.modal').forEach(modal => {
+        if (modal.style.display === 'flex') {
+            initializeCarousel(modal);
         }
     });
 });
