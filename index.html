@@ -698,20 +698,32 @@
     <h2>ATV Electrical Motor Implementation</h2>
 
     <div class="carousel">
-      <!-- Main display area -->
-      <div class="carousel-main">
-        <!-- Default first item (can be image or video) -->
-        <img src="emotor.png" class="active" alt="E-Motor 1">
-      </div>
-
-      <!-- Thumbnails / selectors -->
-      <div class="carousel-thumbs">
-        <img src="emotor.png" data-type="image" alt="E-Motor 1">
-        <video data-type="video" src="emotor.mov" muted playsinline></video>
-        <video data-type="video" src="emotor4.mov" muted playsinline></video>
-        <img src="emotor3.png" data-type="image" alt="E-Motor 3">
-        <video data-type="video" src="emotor2.mov" muted playsinline></video>
-      </div>
+        <!-- Main display area -->
+        <div class="carousel-main">
+            <!-- Default first item -->
+            <img src="emotor.png" class="active" alt="E-Motor 1">
+            
+            <!-- All other media pre-loaded but hidden -->
+            <video muted playsinline style="display: none;">
+                <source src="emotor.mov" type="video/mp4">
+            </video>
+            <video muted playsinline style="display: none;">
+                <source src="emotor4.mov" type="video/mp4">
+            </video>
+            <img src="emotor3.png" alt="E-Motor 3" style="display: none;">
+            <video muted playsinline style="display: none;">
+                <source src="emotor2.mov" type="video/mp4">
+            </video>
+        </div>
+    
+        <!-- Thumbnails / selectors -->
+        <div class="carousel-thumbs">
+            <img src="emotor.png" alt="E-Motor 1" class="active-thumb">
+            <video src="emotor.mov" muted playsinline></video>
+            <video src="emotor4.mov" muted playsinline></video>
+            <img src="emotor3.png" alt="E-Motor 3">
+            <video src="emotor2.mov" muted playsinline></video>
+        </div>
     </div>
 
     <h3>Skills Used</h3>
