@@ -830,29 +830,56 @@
     <h2>Mini Bowling - Table Game</h2>
 
     <div class="carousel">
-      <!-- Main display area -->
-      <div class="carousel-main">
-        <!-- Default first item (can be image or video) -->
-        <video data-type="video" src="bowling.mov" class="active" alt="Bowling Video">
-      </div>
-
-      <!-- Thumbnails / selectors -->
-      <div class="carousel-thumbs">
-        <video data-type="video" src="bowling.mov" muted playsinline></video>
-        <img src="bowling.png" data-type="image" alt="Prototype">
-        <video data-type="video" src="bowling2.mov" muted playsinline></video>
-        <img src="bowling2.png" data-type="image" alt="Prototype">
-        <img src="bowling6.png" data-type="image" alt="Drawing">
-        <img src="bowling7.png" data-type="image" alt="Kinematics">
-        <video data-type="video" src="bowling5.mov" muted playsinline></video>
-        <img src="bowling.gif" data-type="gif" alt="Motion">
-        <video data-type="video" src="bowling3.mov" muted playsinline></video>
-        <video data-type="video" src="bowling4.mov" muted playsinline></video>
-        <video data-type="video" src="bowling6.mov" muted playsinline></video>
-        <img src="bowling9.png" data-type="image" alt="Kinematics">
-        <img src="bowling10.png" data-type="image" alt="Kinematics">
-        <img src="bowling11.png" data-type="image" alt="Kinematics">
-      </div>
+        <!-- Main display area -->
+        <div class="carousel-main">
+            <!-- Default first item -->
+            <video autoplay loop muted playsinline class="active">
+                <source src="bowling.mov" type="video/mp4">
+            </video>
+            
+            <!-- All other media pre-loaded but hidden -->
+            <img src="bowling.png" alt="Prototype" style="display: none;">
+            <video muted playsinline style="display: none;">
+                <source src="bowling2.mov" type="video/mp4">
+            </video>
+            <img src="bowling2.png" alt="Prototype" style="display: none;">
+            <img src="bowling6.png" alt="Drawing" style="display: none;">
+            <img src="bowling7.png" alt="Kinematics" style="display: none;">
+            <video muted playsinline style="display: none;">
+                <source src="bowling5.mov" type="video/mp4">
+            </video>
+            <img src="bowling.gif" alt="Motion" style="display: none;">
+            <video muted playsinline style="display: none;">
+                <source src="bowling3.mov" type="video/mp4">
+            </video>
+            <video muted playsinline style="display: none;">
+                <source src="bowling4.mov" type="video/mp4">
+            </video>
+            <video muted playsinline style="display: none;">
+                <source src="bowling6.mov" type="video/mp4">
+            </video>
+            <img src="bowling9.png" alt="Kinematics" style="display: none;">
+            <img src="bowling10.png" alt="Kinematics" style="display: none;">
+            <img src="bowling11.png" alt="Kinematics" style="display: none;">
+        </div>
+    
+        <!-- Thumbnails / selectors -->
+        <div class="carousel-thumbs">
+            <video src="bowling.mov" muted playsinline class="active-thumb"></video>
+            <img src="bowling.png" alt="Prototype">
+            <video src="bowling2.mov" muted playsinline></video>
+            <img src="bowling2.png" alt="Prototype">
+            <img src="bowling6.png" alt="Drawing">
+            <img src="bowling7.png" alt="Kinematics">
+            <video src="bowling5.mov" muted playsinline></video>
+            <img src="bowling.gif" alt="Motion">
+            <video src="bowling3.mov" muted playsinline></video>
+            <video src="bowling4.mov" muted playsinline></video>
+            <video src="bowling6.mov" muted playsinline></video>
+            <img src="bowling9.png" alt="Kinematics">
+            <img src="bowling10.png" alt="Kinematics">
+            <img src="bowling11.png" alt="Kinematics">
+        </div>
     </div>
 
     <h3>Skills Used</h3>
@@ -1043,17 +1070,18 @@
     <h2>Slider Crank Mechanism</h2>
 
     <div class="carousel">
-      <!-- Main display area -->
-      <div class="carousel-main">
-        <!-- Default first item (can be image or video) -->
-        <video data-type="video" src="slider.mov" class="active" alt="Slider Crank Video">
-      </div>
-
-      <!-- Thumbnails / selectors -->
-      <div class="carousel-thumbs">
-        <video data-type="video" src="slider.mov" muted playsinline></video>
-        <video data-type="video" src="slider2.mov" muted playsinline></video>
-      </div>
+        <div class="carousel-main">
+            <video class="active" autoplay loop muted playsinline>
+                <source src="slider.mov" type="video/mp4">
+            </video>
+            <video style="display: none;" muted playsinline>
+                <source src="slider2.mov" type="video/mp4">
+            </video>
+        </div>
+        <div class="carousel-thumbs">
+            <video src="slider.mov" muted playsinline class="active-thumb"></video>
+            <video src="slider2.mov" muted playsinline></video>
+        </div>
     </div>
 
     <h3>Skills Used</h3>
