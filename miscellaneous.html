@@ -3,74 +3,121 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Beyond Engineering – Jorge Urdaneta</title>
-    <meta name="description" content="A curated look at personal moments beyond engineering — hiking, volunteering, SHPE events, aviation, and more." />
-    <link rel="stylesheet" href="style.css" />
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <title>Beyond Engineering – David Jasso</title>
+    <meta name="description" content="Personal moments beyond engineering — hiking, volunteering, SHPE events, aviation, and more." />
+    <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=DM+Sans:wght@400;600&display=swap" rel="stylesheet" />
     <style>
       body {
         font-family: 'DM Sans', sans-serif;
         margin: 0;
-        background: #fafafa;
-        color: #222;
+        background: #fdfaf6;
+        color: #333;
+        overflow-x: hidden;
       }
 
       header {
         text-align: center;
-        padding: 3rem 1rem 2rem;
+        padding: 4rem 1rem 2rem;
+        background: linear-gradient(to bottom right, #fff7e6, #fef9f3);
       }
 
       header h1 {
-        font-size: 2.2rem;
+        font-family: 'Architects Daughter', cursive;
+        font-size: 3rem;
+        color: #ff7a00;
         margin-bottom: 0.5rem;
+        letter-spacing: 1px;
       }
 
       header p {
-        max-width: 700px;
+        max-width: 650px;
         margin: 0 auto;
-        color: #555;
+        font-size: 1.05rem;
+        color: #5c5c5c;
       }
 
       .back-button {
         position: absolute;
-        top: 1rem;
-        left: 1rem;
+        top: 1.2rem;
+        left: 1.2rem;
         text-decoration: none;
-        color: #BF5700;
+        color: #ff7a00;
         font-weight: 600;
+        transition: color 0.3s ease;
+      }
+
+      .back-button:hover {
+        color: #d45f00;
       }
 
       .misc-gallery {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
         gap: 1.5rem;
-        padding: 0 2rem 4rem;
+        padding: 2rem;
         max-width: 1200px;
-        margin: 0 auto;
+        margin: 0 auto 3rem;
       }
 
       .misc-item {
-        background: white;
-        border-radius: 10px;
-        box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+        background: #fff;
+        border-radius: 16px;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
         overflow: hidden;
-        transition: transform 0.3s ease;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        border: 2px solid #f5e2ca;
       }
 
       .misc-item:hover {
-        transform: translateY(-4px);
+        transform: translateY(-6px);
+        box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
       }
 
       .misc-item img {
         width: 100%;
-        height: 180px;
+        height: 200px;
         object-fit: cover;
       }
 
       .misc-item p {
-        padding: 1rem;
+        padding: 1rem 1.2rem;
         font-size: 0.95rem;
-        line-height: 1.4;
+        color: #444;
+        line-height: 1.45;
+      }
+
+      footer {
+        text-align: center;
+        padding: 2rem;
+        background: #fff7e6;
+        color: #777;
+        font-size: 0.9rem;
+      }
+
+      /* gentle fade-in animation */
+      .misc-item {
+        opacity: 0;
+        transform: translateY(15px);
+        animation: fadeUp 0.6s ease forwards;
+      }
+
+      .misc-item:nth-child(odd) {
+        animation-delay: 0.1s;
+      }
+
+      .misc-item:nth-child(even) {
+        animation-delay: 0.2s;
+      }
+
+      @keyframes fadeUp {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
       }
     </style>
   </head>
@@ -80,66 +127,70 @@
       <a href="index.html" class="back-button">← Back to Portfolio</a>
       <h1>Beyond Engineering</h1>
       <p>
-        A glimpse into the moments outside out of the lab, where I get inspired and stay present. Pictures that go from hiking adventures to SHPE events, volunteering, random cool moments, and experiences that make me grateful and motivate me to be a better engineer..
+        A collection of memories, adventures, and experiences that keep me grounded — from hiking and volunteering to SHPE events, aviation, and engineering moments outside the lab.
       </p>
     </header>
 
     <main>
       <div class="misc-gallery">
         <!-- Hiking (9) -->
-        <div class="misc-item"><img src="images/miscellaneous/hike.png" alt="Hiking"><p><strong>Hiking:</strong> Exploring Hurricane Ridge in Olympic National Park.</p></div>
-        <div class="misc-item"><img src="images/miscellaneous/hike2.png" alt="Hiking"><p><strong>Hiking:</strong> Captivated by the scenic view of Lake Twenty Two.</p></div>
-        <div class="misc-item"><img src="images/miscellaneous/hike3.png" alt="Hiking"><p><strong>Hiking:</strong> Enjoying peaceful moments surrounded by the northernmost point of the contiguous U.S.</p></div>
-        <div class="misc-item"><img src="images/miscellaneous/hike4.png" alt="Hiking"><p><strong>Hiking:</strong> Streneous journey at Blanca Lake with man's best friend.</p></div>
-        <div class="misc-item"><img src="images/miscellaneous/hike5.png" alt="Hiking"><p><strong>Hiking:</strong> Solo adventure at Maple Pass Loop with my hiking PR of 2:30h to complete 6.5mi.</p></div>
-        <div class="misc-item"><img src="images/miscellaneous/hike6.png" alt="Hiking"><p><strong>Hiking:</strong> Experiencing my first National Park: Yosemite National Park!</p></div>
-        <div class="misc-item"><img src="images/miscellaneous/hike7.png" alt="Hiking"><p><strong>Hiking:</strong> Late meeting with Washington's most famous peak: Mount Rainier!.</p></div>
-        <div class="misc-item"><img src="images/miscellaneous/hike8.png" alt="Hiking"><p><strong>Hiking:</strong> Side-tracked to appreciate the beauty at Mount Rainier's National Park.</p></div>
-        <div class="misc-item"><img src="images/miscellaneous/hike9.png" alt="Hiking"><p><strong>Hiking:</strong> Appreciating the beauty behind a waterfall at Tunnel Falls (My longest hike at 13mi).</p></div>
+        <div class="misc-item"><img src="images/miscellaneous/hiking1.jpg" alt="Hiking"><p><strong>Hiking:</strong> Exploring Texas trails and national parks to recharge and reflect.</p></div>
+        <div class="misc-item"><img src="images/miscellaneous/hiking2.jpg" alt="Hiking"><p><strong>Hiking:</strong> Capturing scenic views during outdoor adventures.</p></div>
+        <div class="misc-item"><img src="images/miscellaneous/hiking3.jpg" alt="Hiking"><p><strong>Hiking:</strong> Embracing outdoor challenges as mental resets.</p></div>
+        <div class="misc-item"><img src="images/miscellaneous/hiking4.jpg" alt="Hiking"><p><strong>Hiking:</strong> Finding balance between work and exploration.</p></div>
+        <div class="misc-item"><img src="images/miscellaneous/hiking5.jpg" alt="Hiking"><p><strong>Hiking:</strong> A reminder that persistence and patience lead to new summits.</p></div>
+        <div class="misc-item"><img src="images/miscellaneous/hiking6.jpg" alt="Hiking"><p><strong>Hiking:</strong> Observing natural systems that inspire sustainable design.</p></div>
+        <div class="misc-item"><img src="images/miscellaneous/hiking7.jpg" alt="Hiking"><p><strong>Hiking:</strong> Where engineering logic meets nature’s geometry.</p></div>
+        <div class="misc-item"><img src="images/miscellaneous/hiking8.jpg" alt="Hiking"><p><strong>Hiking:</strong> Reflecting on new goals while surrounded by natural beauty.</p></div>
+        <div class="misc-item"><img src="images/miscellaneous/hiking9.jpg" alt="Hiking"><p><strong>Hiking:</strong> Exploring nature’s patterns and textures.</p></div>
 
         <!-- Volunteering (3) -->
-        <div class="misc-item"><img src="images/miscellaneous/volunteering.png" alt="Volunteering"><p><strong>Volunteering:</strong> Showing highschool students that college is an option regardless of your backgroung through Texas SHPE Jr.</p></div>
-        <div class="misc-item"><img src="images/miscellaneous/volunteerboeing.png" alt="Volunteering"><p><strong>Volunteering:</strong> Promoting the STEM mindset to kids with Boeing!</p></div>
-        <div class="misc-item"><img src="images/miscellaneous/volunteer3.png" alt="Volunteering"><p><strong>Volunteering:</strong> Giving back to the community through service and education.</p></div>
+        <div class="misc-item"><img src="images/miscellaneous/volunteer1.jpg" alt="Volunteering"><p><strong>Volunteering:</strong> Supporting community STEM outreach with SHPE Texas chapters.</p></div>
+        <div class="misc-item"><img src="images/miscellaneous/volunteer2.jpg" alt="Volunteering"><p><strong>Volunteering:</strong> Helping organize student events for mentorship and networking.</p></div>
+        <div class="misc-item"><img src="images/miscellaneous/volunteer3.jpg" alt="Volunteering"><p><strong>Volunteering:</strong> Giving back to the community through education and teamwork.</p></div>
 
         <!-- Painted Shoes (3) -->
-        <div class="misc-item"><img src="images/miscellaneous/shoes.png" alt="Painted Shoes"><p><strong>Custom Shoes:</strong> Designed and hand-painted footwear inspired by creativity and engineering precision.</p></div>
-        <div class="misc-item"><img src="images/miscellaneous/shoes2.png" alt="Painted Shoes"><p><strong>Custom Shoes:</strong> Mixing art and engineering in everyday design.</p></div>
-        <div class="misc-item"><img src="images/miscellaneous/shoes3.png" alt="Painted Shoes"><p><strong>Custom Shoes:</strong> Expressing individuality through art and craftsmanship.</p></div>
+        <div class="misc-item"><img src="images/miscellaneous/shoes1.jpg" alt="Painted Shoes"><p><strong>Custom Shoes:</strong> Designed and hand-painted footwear inspired by creativity and engineering precision.</p></div>
+        <div class="misc-item"><img src="images/miscellaneous/shoes2.jpg" alt="Painted Shoes"><p><strong>Custom Shoes:</strong> Mixing art and engineering in everyday design.</p></div>
+        <div class="misc-item"><img src="images/miscellaneous/shoes3.jpg" alt="Painted Shoes"><p><strong>Custom Shoes:</strong> Expressing individuality through art and craftsmanship.</p></div>
 
         <!-- SHPE Soccer (3) -->
-        <div class="misc-item"><img src="images/miscellaneous/shpesoccer.png" alt="SHPE Soccer"><p><strong>SHPE Soccer:</strong> Competing with fellow engineers in intramural matches: teamwork on and off the field.</p></div>
-        <div class="misc-item"><img src="images/miscellaneous/shpesoccer2.png" alt="SHPE Soccer"><p><strong>SHPE Soccer:</strong> Staying active while building friendships through SHPE athletics.</p></div>
-        <div class="misc-item"><img src="images/miscellaneous/shpesoccer4.png" alt="SHPE Soccer"><p><strong>SHPE Soccer:</strong> Representing UT SHPE at SHPE Region's 5 Soccer Showdown: Lonestar!</p></div>
+        <div class="misc-item"><img src="images/miscellaneous/shpe-soccer1.jpg" alt="SHPE Soccer"><p><strong>SHPE Soccer:</strong> Competing with fellow engineers in intramural matches — teamwork on and off the field.</p></div>
+        <div class="misc-item"><img src="images/miscellaneous/shpe-soccer2.jpg" alt="SHPE Soccer"><p><strong>SHPE Soccer:</strong> Staying active while building friendships through SHPE athletics.</p></div>
+        <div class="misc-item"><img src="images/miscellaneous/shpe-soccer3.jpg" alt="SHPE Soccer"><p><strong>SHPE Soccer:</strong> Balancing academics and sports for a healthy lifestyle.</p></div>
 
         <!-- Whataburger (2) -->
-        <div class="misc-item"><img src="images/miscellaneous/whataburger.png" alt="Whataburger"><p><strong>Whataburger:</strong> Nothing better than being recognized for your hard work :) </p></div>
-        <div class="misc-item"><img src="images/miscellaneous/whataburger2.png" alt="Whataburger"><p><strong>Whataburger:</strong> Because everyone needs late-night fuel... Especially hard-working band teams!</p></div>
+        <div class="misc-item"><img src="images/miscellaneous/whataburger1.jpg" alt="Whataburger"><p><strong>Whataburger Runs:</strong> Ending long project nights with the team’s favorite Texas tradition.</p></div>
+        <div class="misc-item"><img src="images/miscellaneous/whataburger2.jpg" alt="Whataburger"><p><strong>Whataburger:</strong> Because every engineer needs late-night fuel.</p></div>
 
         <!-- SHPE Regional Convention (1) -->
-        <div class="misc-item"><img src="images/miscellaneous/shpe.png" alt="SHPE Regional Convention"><p><strong>SHPE Regional Convention:</strong> Connecting with SHPE leaders and professionals from across the region 5.</p></div>
+        <div class="misc-item"><img src="images/miscellaneous/shpe-regional.jpg" alt="SHPE Regional Convention"><p><strong>SHPE Regional Convention:</strong> Connecting with SHPE leaders and professionals from across the region.</p></div>
 
         <!-- Flying Plane (1) -->
-        <div class="misc-item"><img src="images/miscellaneous/plane.png" alt="Flying a plane"><p><strong>Flying an Airplane!</strong> Taking the controls during Boeing's Fly-out!</p></div>
+        <div class="misc-item"><img src="images/miscellaneous/flying-plane.jpg" alt="Flying a plane"><p><strong>Flight Training:</strong> Taking the controls during a discovery flight — a dream come true for an aspiring engineer.</p></div>
 
         <!-- F1 Pit Stop (1) -->
-        <div class="misc-item"><img src="images/miscellaneous/pit.png" alt="F1 Pit Stop Challenge"><p><strong>Formula 1 Pit Stop Challenge:</strong> Participating in a live pit-stop simulation in William's Racing F1 Weekend in Austin!.</p></div>
+        <div class="misc-item"><img src="images/miscellaneous/f1-pitstop.jpg" alt="F1 Pit Stop Challenge"><p><strong>Formula 1 Pit Stop Challenge:</strong> Competing in a live pit-stop simulation at the US Grand Prix.</p></div>
 
         <!-- Lucid Motors Longhorn Energy (1) -->
-        <div class="misc-item"><img src="images/miscellaneous/lucid.png" alt="Lucid Motors Team"><p><strong>LUCID @ Longhorn Energy:</strong> Helping students connect with Lucid Motors through Longhorn Energy.</p></div>
+        <div class="misc-item"><img src="images/miscellaneous/lucid-longhorn.jpg" alt="Lucid Motors Team"><p><strong>Lucid Motors Team:</strong> Collaborating with Longhorn Energy Club during a Lucid Motors partnership event.</p></div>
 
         <!-- SHPE Awards (2) -->
-        <div class="misc-item"><img src="images/miscellaneous/joty.png" alt="SHPE Junior of the Year"><p><strong>SHPE Junior of the Year:</strong> Recognized for academic excellence and leadership within SHPE in my first year at UT!</p></div>
-        <div class="misc-item"><img src="images/miscellaneous/bd.png" alt="SHPE Best Dressed"><p><strong>SHPE Best Dressed:</strong> Honored for going beyond professionalism and excellence with my passion for fashion.</p></div>
+        <div class="misc-item"><img src="images/miscellaneous/shpe-junior.jpg" alt="SHPE Junior of the Year"><p><strong>SHPE Junior of the Year:</strong> Recognized for academic excellence and leadership within SHPE.</p></div>
+        <div class="misc-item"><img src="images/miscellaneous/shpe-best-dressed.jpg" alt="SHPE Best Dressed"><p><strong>SHPE Best Dressed:</strong> Honored for professionalism and style at SHPE Gala Night.</p></div>
 
         <!-- Boeing & ASCEND (3) -->
-        <div class="misc-item"><img src="images/miscellaneous/experimental.png" alt="Testing plane for Boeing"><p><strong>Boeing Flight Test:</strong> Inside a testing aircraft at Boeing, exploring advanced flight instrumentation systems.</p></div>
-        <div class="misc-item"><img src="images/miscellaneous/ascend.png" alt="Working with ASCEND"><p><strong>ASCEND Research:</strong> Hands-on work integrating avionics and sensor systems for the ASCEND project.</p></div>
-        <div class="misc-item"><img src="images/miscellaneous/atv.png" alt="ASCEND Team"><p><strong>ASCEND Team:</strong> Collaborating with the full ASCEND engineering team on autonomous vehicle testing.</p></div>
+        <div class="misc-item"><img src="images/miscellaneous/boeing-plane.jpg" alt="Testing plane for Boeing"><p><strong>Boeing Flight Test:</strong> Inside a testing aircraft, exploring advanced flight instrumentation systems.</p></div>
+        <div class="misc-item"><img src="images/miscellaneous/ascend-work.jpg" alt="Working with ASCEND"><p><strong>ASCEND Research:</strong> Hands-on work integrating avionics and sensor systems for the ASCEND project.</p></div>
+        <div class="misc-item"><img src="images/miscellaneous/ascend-team.jpg" alt="ASCEND Team"><p><strong>ASCEND Team:</strong> Collaborating with the full ASCEND engineering team on autonomous vehicle testing.</p></div>
 
         <!-- Boeing Integration Center (1) -->
-        <div class="misc-item"><img src="images/miscellaneous/aic.png" alt="Boeing Integration Center"><p><strong>Boeing Integration Center:</strong> Visiting the Airplane Integration Center to observe real-time assembly and system testing.</p></div>
+        <div class="misc-item"><img src="images/miscellaneous/boeing-integration.jpg" alt="Boeing Integration Center"><p><strong>Boeing Integration Center:</strong> Visiting the Airplane Integration Center to observe real-time system assembly and testing.</p></div>
       </div>
     </main>
+
+    <footer>
+      © 2025 David Jasso — Designed with curiosity & creativity.
+    </footer>
   </body>
 </html>
