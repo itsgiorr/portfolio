@@ -406,14 +406,14 @@
     <p>
       During my internship at Boeing, I was assigned to design an <strong>inspection tool</strong> for the installation
       template of the <strong>777X Heads-Up Display (HUD)</strong>. While the specific engineering drawing and tolerances are confidential,
-      the overall goal was to develop a system that verified the accuracy of the HUD’s hard-point alignment — a critical factor
-      for ensuring proper optical projection and flight deck visibility.
+      the overall goal was to develop a system that verified the accuracy of the HUD’s hard-point alignment. This is a critical factor
+      for ensuring proper optical projection and accuracy of the runway highlight feature.
     </p>
 
     <h3>Design Challenge</h3>
     <p>
       The HUD installation template includes several <strong>hard points</strong> that must remain within extremely tight tolerances,
-      with the smallest allowable deviation being just <strong>0.006 inches (6 thou)</strong>. My task was to create an inspection
+      with the smallest allowable deviation being in the single digits of a thousandth of an inch.. My task was to create an inspection
       tool capable of detecting when any of those points were out of tolerance, without relying on complex or time-consuming CMM procedures.
     </p>
 
@@ -426,15 +426,15 @@
 
     <p>
       In operation, the laser would pass cleanly through both holes if the points were within tolerance. If even slightly out
-      of alignment, the beam would begin to clip the edge — a visual indicator of deviation. Complete blockage indicated a
-      critical out-of-tolerance condition requiring CMM verification or rework. This simple optical logic provided a
-      <strong>non-contact and highly intuitive inspection method</strong>.
+      of alignment, the beam would begin to clip the edge, which would show a visual indicator of deviation. Complete blockage indicated a
+      critical out-of-tolerance condition requiring CMM verification and most likely a rework. This simple optical logic provided a
+      <strong>non-contact and highly intuitive inspection method for mechanics to use before installation</strong>.
     </p>
 
     <h3>Iterative Refinement</h3>
     <p>
-      Throughout the design process, I iterated multiple geometries to calibrate the tool’s detection sensitivity — moving
-      from 0.076" deviation detection down to 0.010". I also investigated using <strong>optical lenses</strong> to focus the
+      Throughout the design process, I iterated multiple geometries to calibrate the tool’s detection sensitivity. My first results achieved
+      a 0.076" deviation detection down and the last ones a 0.010". I also investigated using <strong>optical lenses</strong> to focus the
       beam for tighter detection thresholds. All CAD modeling was performed in <strong>CATIA V5</strong>, and I created
       <strong>testing blocks</strong> to simulate the HUD template for bench testing prior to full-scale implementation.
     </p>
@@ -443,14 +443,14 @@
       Once the initial design was validated virtually, I prepared the model for 3D printing to evaluate assembly alignment
       and beam behavior. Although the final machining phase was pending at the end of my internship, I documented a full
       <strong>continuation guide</strong> outlining dependent and independent variables, material considerations, and
-      calibration methodology for the next engineer to carry the project forward.
+      calibration methodology for the next engineer to take advantage of the momentum and carry the project forward.
     </p>
 
     <h3>Outcome & Impact</h3>
     <p>
       The project demonstrated how <strong>optical inspection tools</strong> can be designed to achieve high accuracy while
       remaining lightweight and easy to use on the shop floor. It also gave me hands-on experience in tolerance stack-up
-      analysis, fixture design, and DFM principles — all within the context of Boeing’s rigorous engineering environment.
+      analysis, fixture design, and DFM principles. Everything within the context of Boeing’s rigorous engineering environment, and a reach to perfection.
     </p>
   </div>
 </div>
@@ -490,7 +490,7 @@
     </p>
 
     <p>
-      After analyzing common passenger frustrations, we discovered that one of the most frequent — yet overlooked — issues comes
+      After analyzing common passenger frustrations, we discovered that one of the most frequent (yet highly overlooked) issues comes
       from the <strong>economy seat tray’s cup holder</strong>. It’s often too shallow to actually hold drinks, causing spills and stress
       during turbulence. This creates a poor passenger experience and, in some cases, safety concerns from spilled hot beverages.
     </p>
@@ -505,7 +505,7 @@
 
     <p>
       We further improved usability by adding a small <strong>front tab</strong> that serves as a phone rest, allowing passengers to
-      comfortably watch content — a feature that aligns with airlines’ shift toward in-flight streaming services. The bottom of the
+      comfortably watch content, which aligns with airlines’ shift toward in-flight streaming services. The bottom of the
       collapsible holder can be <strong>customized with airline branding and colors</strong>, creating a new space for identity and
       personalization without additional parts or materials.
     </p>
@@ -520,7 +520,7 @@
 
     <h3>Prototyping & Results</h3>
     <p>
-      Given the short timeline, we worked efficiently — brainstorming, designing, and fabricating a <strong>1:1 functional prototype</strong>
+      Given the short timeline, we worked efficiently by brainstorming, designing, and fabricating a <strong>1:1 functional prototype</strong>
       within just a day and a half at Boeing’s Integration Center. The prototype showcased the collapsible mechanism, phone stand,
       and overall ergonomics of the design. We concluded the event by presenting our final concept to a panel of Boeing engineers
       and designers, earning <strong>2nd place</strong> in the competition for innovation and user-centered design.
@@ -529,7 +529,7 @@
     <h3>Reflection</h3>
     <p>
       This project reinforced the importance of <strong>balancing creativity with manufacturability</strong>. It also showed how
-      user-centered thinking can uncover meaningful improvements in everyday designs — even in something as common as an airplane
+      user-centered thinking can uncover meaningful improvements in everyday designs, even in something as common as an airplane
       seat tray. Beyond the competition, this experience strengthened my skills in rapid ideation, teamwork, and communicating
       design intent under tight deadlines.
     </p>
@@ -738,12 +738,75 @@
     </div>
 
     <h3>Project Overview</h3>
-    <p>Designed and implemented the electric motor system for the ATV, ensuring optimal layout, accessibility, and power transfer efficiency.</p>
-
-    <h3>Design Process</h3>
-    <p>Hola</p>
-  </div>
-</div>
+        <p>
+          As part of the <strong>ASCEND Autonomous Systems Research Team</strong>, I contributed to the design and 
+          implementation of the <strong>electric motor system</strong> for the ATV, marking a major milestone in our 
+          transition from combustion to electric propulsion. This phase focused on selecting an appropriate motor, 
+          designing an efficient mounting system under strict space and voltage constraints, and preparing the ATV for 
+          integration with the new powertrain architecture.
+        </p>
+    
+        <h3>Research & Motor Selection</h3>
+        <p>
+          We began by researching available <strong>electric motors</strong> capable of providing sufficient power to 
+          reach the ATV’s target speed of approximately <strong>30 mph</strong>. The challenge was identifying a model 
+          that balanced performance, efficiency, and cost, while also complying with the <strong>UT campus safety 
+          guidelines</strong> limiting us to a low-voltage configuration (four 5V batteries in parallel).
+        </p>
+    
+        <p>
+          After evaluating several commercial options, our team selected a compact brushed DC motor that met the 
+          torque and speed requirements while remaining within the electrical and budget constraints. Once chosen, 
+          we searched for compatible <strong>custom mounting brackets</strong> to secure the cylindrical motor in a flat, 
+          stable orientation.
+        </p>
+    
+        <h3>Design & Mounting Strategy</h3>
+        <p>
+          We explored multiple <strong>mounting configurations</strong> to integrate the motor within the limited space 
+          of the ATV’s chassis. Early prototypes were constructed using <strong>cardboard and mockups</strong> to test 
+          various orientations and attachment methods. However, during physical prototyping we discovered that several 
+          of these designs interfered with the <strong>gear chain alignment</strong>, causing collisions with the ATV frame 
+          due to insufficient height clearance.
+        </p>
+    
+        <p>
+          To overcome this, I proposed and helped develop a <strong>suspended motor mount system</strong> — a novel 
+          approach that allowed the motor to hang securely from the frame rather than sit atop it. This configuration 
+          freed up valuable interior space for critical components such as the <strong>motor controller, avionics, and 
+          battery modules</strong>, while maintaining precise chain alignment and minimizing vibration.
+        </p>
+    
+        <h3>Prototype & Structural Integration</h3>
+        <p>
+          The final design consisted of a pair of <strong>C-channel aluminum rails</strong> supporting the custom motor 
+          plate. These rails acted like a <strong>drawer system</strong>, enabling slight sliding adjustment during alignment 
+          and maintenance. During the initial prototype phase, the motor was temporarily supported with a <strong>steel 
+          cable harness</strong> to test stability and clearance before committing to permanent fabrication.
+        </p>
+    
+        <p>
+          Once the mechanical lead approved the concept, we planned the final integration process. Due to extreme space 
+          limitations, traditional fasteners such as bolts and screws were impractical. Instead, we used a <strong>welded 
+          reference plate</strong> to join the C-channels directly to the ATV frame. This method ensured the rails 
+          remained perfectly parallel and rigid, maintaining the correct spacing for the motor mount while resisting 
+          operational vibration.
+        </p>
+    
+        <h3>Outcome & Impact</h3>
+        <p>
+          The implemented design provided a <strong>lightweight, compact, and serviceable solution</strong> for housing 
+          the new electric motor. The suspended mounting system maximized frame space utilization, improved drivetrain 
+          alignment, and simplified future maintenance and upgrades.
+        </p>
+    
+        <p>
+          This project strengthened my experience in <strong>mechanical design under constraints, hands-on prototyping, 
+          and systems integration</strong>. It also demonstrated how creative thinking — such as transforming a traditional 
+          rigid mount into a suspended system — can turn space limitations into engineering innovation.
+        </p>
+      </div>
+    </div>
     
 <!-- Robotic Arm Modal -->
 <div id="modal-arm" class="modal">
@@ -1015,7 +1078,7 @@
 
     <h3>Project Overview</h3>
     <p>
-      As part of the <strong>Robotic Mechanism Design</strong> course, our team — <strong>“The Decepticons”</strong> —
+      As part of the <strong>Robotic Mechanism Design</strong> course, my team, <strong>“The Decepticons”</strong>,
       was challenged to design and build a <strong>remote-controlled vehicle</strong> using a set of two powered actuators
       and one non-actuated wheel. The project combined <strong>mechanical design, circuit integration, and programming</strong>
       to develop a functional RC car capable of both manual and autonomous motion.
@@ -1126,7 +1189,7 @@
     <p>
       After assembling and calibrating the system, we achieved <strong>smooth, consistent motion</strong> with
       remarkably low mechanical backlash. By carefully selecting pivot clearances and verifying alignment through
-      iterative fitting, we reduced unwanted vibration and achieved a rigid transmission of force — allowing the hand-actuated
+      iterative fitting, we reduced unwanted vibration and achieved a rigid transmission of force, which allowed the hand-actuated
       crank to efficiently lift the 1 lb load with minimal slippage.
     </p>
 
