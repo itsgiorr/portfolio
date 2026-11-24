@@ -3,7 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Jorge Urdaneta's Portfolio </title>
+    <title>Jorge Urdaneta | Mechanical Engineer, Robotics & Mechatronics</title>
+    <meta name="description" content="Jorge Urdaneta: Mechanical Engineer (UT Austin, Dec 2026) focused on robotics and mechatronics hardware. Ex-Boeing 777X equipment and manufacturing engineering intern.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://itsgiorr.github.io/portfolio/">
+    <meta property="og:title" content="Jorge Urdaneta | Mechanical Engineer, Robotics & Mechatronics Hardware">
+    <meta property="og:description" content="Ex-Boeing 777X Equipment & Manufacturing Engineering Intern. Test fixtures, inspection tooling, and electromechanical builds.">
+    <meta property="og:image" content="https://itsgiorr.github.io/portfolio/web/og-preview.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -37,9 +47,15 @@
                     <h2>Mechanical Engineer | Robotics & Mechatronics Hardware</h2>
                     <p>Ex-Boeing 777X Equipment & Manufacturing Engineering Intern | UT Austin, Dec 2026 | SHPE Leader</p>
                     <div class="venezuela-accent"></div>
+                    <div class="hero-stats">
+                        <div class="hero-stat"><strong>2</strong><span>Boeing 777X internships</span></div>
+                        <div class="hero-stat"><strong>25+</strong><span>engineers led on ASCEND</span></div>
+                        <div class="hero-stat"><strong>$195</strong><span>test fixture vs. $12.9k commercial</span></div>
+                    </div>
                     <div class="hero-buttons">
-                        <a href="#contact" class="btn btn-primary">Get In Touch</a>
+                        <a href="Jorge_Urdaneta_Resume.pdf" class="btn btn-primary" download><i class="fas fa-file-arrow-down"></i> Resume</a>
                         <a href="#projects" class="btn btn-secondary">View Projects</a>
+                        <a href="#contact" class="btn btn-secondary">Get In Touch</a>
                     </div>
                 </div>
                 <div class="hero-image">
@@ -109,34 +125,48 @@
 
   <div class="container">
     <h2 class="section-title">Technical Experience</h2>
-    <div class="skills-grid">
-      <div class="skill-category">
-        <h3><i class="fas fa-plane"></i> BOEING</h3>
-        <ul>
-          <li><span class="skill-name">Equipment Engineering Intern</span></li>
-          <li><span class="skill-name">May 2026 - Aug 2026</span></li>
-          <li><span class="skill-name">Team: 777/777X MidBodies Future Builds</span></li>
-          <li><span class="skill-name">Metrology automation, WinCC HMI, C# SDK migration; cut data-loss risk 90%</span></li>
-        </ul>
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-marker"></div>
+        <div class="timeline-content">
+          <h3>Equipment Engineering Intern</h3>
+          <h4>Boeing · 777X Mid-Bodies Future Builds · Everett, WA</h4>
+          <p class="timeline-date">May 2026 – Aug 2026</p>
+          <ul class="timeline-list">
+            <li>Deployed and validated networked metrology automation linking Leica laser trackers, PCs, and SPM tablets</li>
+            <li>Selected a UPS architecture and designed a CATIA mounting bracket, cutting data-loss risk 90%</li>
+            <li>Ported one-third of legacy laser-tracker HMI commands to a new SDK in C# and built a validation test bench</li>
+            <li>Redesigned WinCC HMI workflows; migrated 3 metrology kiosks from Windows 7 to 10</li>
+          </ul>
+        </div>
       </div>
-
-      <div class="skill-category">
-        <h3><i class="fas fa-cogs"></i> ASCEND TEXAS</h3>
-        <ul>
-          <li><span class="skill-name">Program Manager · Mechanical Design Lead · Mechanical Design & Production Engineer</span></li>
-          <li><span class="skill-name">Sep 2024 - May 2026</span></li>
-          <li><span class="skill-name">First-generation member; grew from designer to Program Manager of 25+ engineers on a hybrid paramotor-ATV for remote payload delivery</span></li>
-        </ul>
+      <div class="timeline-item">
+        <div class="timeline-marker"></div>
+        <div class="timeline-content">
+          <h3>Manufacturing Engineering Intern</h3>
+          <h4>Boeing · 777X Systems & Electrical Installation · Everett, WA</h4>
+          <p class="timeline-date">Jun 2025 – Sep 2025</p>
+          <ul class="timeline-list">
+            <li>Redesigned the gyro battery housing in CATIA V5, cutting system footprint ~50%</li>
+            <li>Engineered a GD&T-based HUD inspection tool, raising deviation sensitivity 75%</li>
+            <li>Audited 777-9 pilot seat builds, flagging 24 aircraft for rework</li>
+            <li>2nd place, BCA ONE Intern Design-a-thon (economy seat tray)</li>
+          </ul>
+        </div>
       </div>
-
-      <div class="skill-category">
-        <h3><i class="fas fa-plane"></i> BOEING</h3>
-        <ul>
-          <li><span class="skill-name">Manufacturing Engineering Intern</span></li>
-          <li><span class="skill-name">June 2025 - Sept 2025</span></li>
-          <li><span class="skill-name">Team: 777/777X Systems ME</span></li>
-          <li><span class="skill-name">CATIA redesign cut gyro battery footprint ~50%; HUD inspection tool +75% sensitivity</span></li>
-        </ul>
+      <div class="timeline-item">
+        <div class="timeline-marker"></div>
+        <div class="timeline-content">
+          <h3>Program Manager · Mechanical Design Lead · Mechanical Design & Production Engineer</h3>
+          <h4>ASCEND Texas · UT Austin</h4>
+          <p class="timeline-date">Sep 2024 – May 2026</p>
+          <ul class="timeline-list">
+            <li>First-generation member, from research-lab concept on paper to a hybrid paramotor-ATV vehicle</li>
+            <li>Program Manager: coordinated 25+ engineers across mechanical, electrical, and software subteams</li>
+            <li>Design Lead: led a 5-person subteam on the propulsion subsystem and cage-to-chassis integration</li>
+            <li>Converted the ATV to electric; designed the welded motor mount and first avionics enclosure</li>
+          </ul>
+        </div>
       </div>
     </div>
   </div>
@@ -192,11 +222,18 @@
     <section id="projects" class="projects">
         <div class="container">
             <h2 class="section-title">Featured Projects</h2>
+            <div class="project-filters" role="group" aria-label="Filter projects">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="robotics">Robotics & Mechatronics</button>
+                <button class="filter-btn" data-filter="manufacturing">Manufacturing & Tooling</button>
+                <button class="filter-btn" data-filter="boeing">Boeing</button>
+                <button class="filter-btn" data-filter="ascend">ASCEND</button>
+            </div>
             <div class="projects-grid">
 
-                <div class="project-card">
+                <div class="project-card" data-category="robotics">
                     <div class="project-image">
-                        <img src="images/mestrain/fixture.jpg" alt="MEStrain tensile test fixture on the lab bench" class="project-image">
+                        <img loading="lazy" src="images/mestrain/fixture.jpg" alt="MEStrain tensile test fixture on the lab bench" class="project-image">
                     </div>
                     <div class="project-content">
                         <h3>MEStrain: Benchtop Tensile Test Fixture</h3>
@@ -220,9 +257,9 @@
                     </div>
                 </div>
 
-                <div class="project-card">
+                <div class="project-card" data-category="manufacturing boeing">
                     <div class="project-image">
-                        <img src="web/hud.jpg" alt="777X HUD" class="project-image">
+                        <img loading="lazy" src="web/hud.jpg" alt="777X HUD" class="project-image">
                     </div>
                     <div class="project-content">
                         <h3>Inspection Tool for 777X HUD</h3>
@@ -245,9 +282,9 @@
                     </div>
                 </div>
 
-                <div class="project-card">
+                <div class="project-card" data-category="ascend manufacturing">
                     <div class="project-image e-motor">
-                        <img src="web/emotor.jpg" alt="E-Motor ATV" class="project-image">
+                        <img loading="lazy" src="web/emotor.jpg" alt="E-Motor ATV" class="project-image">
                     </div>
                     <div class="project-content">
                         <h3>ATV Electric Motor Integration</h3>
@@ -270,9 +307,9 @@
                     </div>
                 </div>
 
-                <div class="project-card">
+                <div class="project-card" data-category="manufacturing boeing">
                     <div class="project-image">
-                        <img src="SA.jpg" alt="Boeing 777X Metrology" class="project-image">
+                        <img loading="lazy" src="SA.jpg" alt="Boeing 777X Metrology" class="project-image">
                     </div>
                     <div class="project-content">
                         <h3>Boeing 777X Metrology Modernization</h3>
@@ -296,7 +333,7 @@
                     </div>
                 </div>
 
-                <div class="project-card">
+                <div class="project-card" data-category="robotics">
                     <div class="project-image">
                       <video autoplay loop muted playsinline>
                         <source src="web/bowling.mp4" type="video/mp4">
@@ -323,9 +360,9 @@
                     </div>
                 </div>
 
-                <div class="project-card">
+                <div class="project-card" data-category="ascend">
                     <div class="project-image">
-                        <img src="web/avionics.jpg" alt="ATV with Avionics Enclosure" class="project-image">
+                        <img loading="lazy" src="web/avionics.jpg" alt="ATV with Avionics Enclosure" class="project-image">
                     </div>
                     <div class="project-content">
                         <h3>Avionics Enclosure</h3>
@@ -352,9 +389,9 @@
             <h2 class="section-title more-projects-title">More Projects</h2>
             <div class="projects-grid">
 
-                <div class="project-card">
+                <div class="project-card" data-category="robotics">
                     <div class="project-image robotic-arm">
-                        <img src="hand.png" alt="Robotic Hand CAD" class="project-image">
+                        <img loading="lazy" src="hand.png" alt="Robotic Hand CAD" class="project-image">
                     </div>
                     <div class="project-content">
                         <h3>Robotic Hand (CAD Concept)</h3>
@@ -375,9 +412,9 @@
                     </div>
                 </div>
 
-                <div class="project-card">
+                <div class="project-card" data-category="ascend">
                     <div class="project-image motor-removal">
-                        <img src="web/removal.jpg" alt="Gas Motor Removal on ATV" class="project-image">
+                        <img loading="lazy" src="web/removal.jpg" alt="Gas Motor Removal on ATV" class="project-image">
                     </div>
                     <div class="project-content">
                         <h3>ATV Gas Motor Removal</h3>
@@ -397,9 +434,9 @@
                     </div>
                 </div>
 
-                <div class="project-card">
+                <div class="project-card" data-category="boeing manufacturing">
                     <div class="project-image">
-                        <img src="web/tray3.jpg" alt="Seat Tray" class="project-image">
+                        <img loading="lazy" src="web/tray3.jpg" alt="Seat Tray" class="project-image">
                     </div>
                     <div class="project-content">
                         <h3>New Economy Seat Tray</h3>
@@ -420,9 +457,9 @@
                     </div>
                 </div>
 
-                <div class="project-card">
+                <div class="project-card" data-category="robotics">
                     <div class="project-image">
-                        <img src="web/rccar.jpg" alt="RC Car" class="project-image">
+                        <img loading="lazy" src="web/rccar.jpg" alt="RC Car" class="project-image">
                     </div>
                     <div class="project-content">
                         <h3>RC Car</h3>
@@ -442,7 +479,7 @@
                     </div>
                 </div>
 
-                <div class="project-card">
+                <div class="project-card" data-category="robotics">
                     <div class="project-image">
                       <video autoplay loop muted playsinline>
                         <source src="web/slider.mp4" type="video/mp4">
@@ -513,7 +550,7 @@
     <span class="close">&times;</span>
     <h2>Inspection Tool for 777X Heads-Up Display (HUD)</h2>
 
-    <img src="web/hud.jpg" alt="777X HUD">
+    <img loading="lazy" src="web/hud.jpg" alt="777X HUD">
 
     <h3>Skills Used</h3>
     <div class="project-tags">
@@ -524,7 +561,7 @@
         <span class="tag">Design for Manufacturing (DFM)</span>
     </div>
 
-    <h3>Project Overview</h3>
+    <h3 class="cs-head">Problem</h3>
     <p>
       During my internship at Boeing, I was assigned to design an <strong>inspection tool</strong> for the installation
       template of the <strong>777X Heads-Up Display (HUD)</strong>. While the specific engineering drawing and tolerances are confidential,
@@ -532,14 +569,18 @@
       for ensuring proper optical projection and accuracy of the runway highlight feature.
     </p>
 
-    <h3>Design Challenge</h3>
+    <h4 class="cs-sub">Design Challenge</h4>
     <p>
       The HUD installation template includes several <strong>hard points</strong> that must remain within extremely tight tolerances,
       with the smallest allowable deviation being in the single digits of a thousandth of an inch. My task was to create an inspection
       tool capable of detecting when any of those points were out of tolerance, without relying on complex or time-consuming CMM procedures.
     </p>
 
-    <h3>Design Process</h3>
+    <h3 class="cs-head">My Role</h3>
+    <p class="cs-role">Sole designer, as a Manufacturing Engineering intern: concept, CATIA V5 modeling, GD&T and tolerance analysis, bench-test blocks, and the continuation guide.</p>
+
+    <h3 class="cs-head">Approach</h3>
+    <h4 class="cs-sub">Design Process</h4>
     <p>
       I approached the problem by designing a <strong>three-part inspection assembly</strong> that would interface directly
       with the existing hard points. The concept was based on laser alignment: one component housed a precision laser source,
@@ -553,7 +594,7 @@
       <strong>non-contact and highly intuitive inspection method for mechanics to use before installation</strong>.
     </p>
 
-    <h3>Iterative Refinement</h3>
+    <h4 class="cs-sub">Iterative Refinement</h4>
     <p>
       Throughout the design process, I iterated multiple geometries to calibrate the tool’s detection sensitivity. Through these iterations I raised the
       tool's deviation sensitivity by <strong>75%</strong>, to the point where it catches hard-point shifts over <strong>0.015"</strong>. I also
@@ -569,7 +610,8 @@
       calibration methodology for the next engineer to take advantage of the momentum and carry the project forward.
     </p>
 
-    <h3>Outcome & Impact</h3>
+    <h3 class="cs-head">Results</h3>
+    <h4 class="cs-sub">Outcome & Impact</h4>
     <p>
       The project demonstrated how <strong>optical inspection tools</strong> can be designed to achieve high accuracy while
       remaining lightweight and easy to use on the shop floor. It also gave me hands-on experience in tolerance stack-up
@@ -587,12 +629,12 @@
 
     <div class="carousel">
         <div class="carousel-main">
-            <img src="images/mestrain/fixture.jpg" class="active" alt="MEStrain fixture: stepper-driven linear stage on 2020 extrusion">
-            <img src="images/mestrain/clamp_cad.jpg" alt="CAD of the grip-and-sense clamp with PCB face and rubber face" style="display: none;">
+            <img loading="lazy" src="images/mestrain/fixture.jpg" class="active" alt="MEStrain fixture: stepper-driven linear stage on 2020 extrusion">
+            <img loading="lazy" src="images/mestrain/clamp_cad.jpg" alt="CAD of the grip-and-sense clamp with PCB face and rubber face" style="display: none;">
         </div>
         <div class="carousel-thumbs">
-            <img src="images/mestrain/fixture.jpg" alt="Fixture" class="active-thumb">
-            <img src="images/mestrain/clamp_cad.jpg" alt="Clamp CAD">
+            <img loading="lazy" src="images/mestrain/fixture.jpg" alt="Fixture" class="active-thumb">
+            <img loading="lazy" src="images/mestrain/clamp_cad.jpg" alt="Clamp CAD">
         </div>
     </div>
 
@@ -606,7 +648,7 @@
         <span class="tag">Test Fixture Design</span>
     </div>
 
-    <h3>Project Overview</h3>
+    <h3 class="cs-head">Problem</h3>
     <p>
       For my senior design project, our team is building a benchtop tensile tester for a UT lab developing a
       <strong>knitted collar that monitors swallowing</strong> using three knitted strain sensors. To trust those sensors,
@@ -614,7 +656,7 @@
       Commercial testers that can do this start at <strong>$12,900</strong>; our budget was <strong>$500</strong>.
     </p>
 
-    <h3>My Role</h3>
+    <h3 class="cs-head">My Role</h3>
     <p>
       I designed the fixture itself and integrated its electronics onto a single system. The design includes a
       <strong>stepper-driven horizontal stage</strong> on a 300 mm linear rail and a combined <strong>grip-and-sense jaw</strong>:
@@ -622,20 +664,21 @@
       collar is held, removing the lead and contact resistance that would otherwise dominate a ~130 Ω measurement loop.
     </p>
 
-    <h3>Electronics & Control</h3>
+    <h3 class="cs-head">Approach</h3>
+    <h4 class="cs-sub">Electronics & Control</h4>
     <p>
       An <strong>ESP32</strong> drives a <strong>NEMA 23 stepper</strong> through a <strong>TB6600</strong> driver and reads a
       <strong>1 kg load cell</strong> through an <strong>HX711</strong>, with limit switches and a hardwired e-stop. Force,
       displacement, and sensor resistance are logged on one shared clock so the lab can line up mechanical load with sensor response.
     </p>
 
-    <h3>Design Decisions</h3>
+    <h4 class="cs-sub">Design Decisions</h4>
     <p>
       The fixture was designed to <strong>31 specifications</strong>, including ≤1 mm grip slip and ≥150 mm travel. After sponsor review,
       we re-architected from a vertical to a <strong>horizontal stage</strong> to reduce stress on the motor and load cell.
     </p>
 
-    <h3>Results</h3>
+    <h3 class="cs-head">Results</h3>
     <ul>
       <li><strong>$195</strong> bill of materials (39% of budget) vs. $12,900+ for commercial testers</li>
       <li><strong>~0.1 mm</strong> positioning, verified by dial indicator</li>
@@ -652,12 +695,12 @@
 
     <div class="carousel">
         <div class="carousel-main">
-            <img src="SA.jpg" class="active" alt="Spatial Analyzer">
-            <img src="windows10.jpg" alt="Metrology kiosk upgrade" style="display: none;">
+            <img loading="lazy" src="SA.jpg" class="active" alt="Spatial Analyzer">
+            <img loading="lazy" src="windows10.jpg" alt="Metrology kiosk upgrade" style="display: none;">
         </div>
         <div class="carousel-thumbs">
-            <img src="SA.jpg" alt="Spatial Analyzer" class="active-thumb">
-            <img src="windows10.jpg" alt="Metrology kiosk upgrade">
+            <img loading="lazy" src="SA.jpg" alt="Spatial Analyzer" class="active-thumb">
+            <img loading="lazy" src="windows10.jpg" alt="Metrology kiosk upgrade">
         </div>
     </div>
 
@@ -671,40 +714,44 @@
         <span class="tag">System Integration</span>
     </div>
 
-    <h3>Project Overview</h3>
+    <h3 class="cs-head">Problem</h3>
     <p>
       As an Equipment Engineering intern on the 777X Mid-Bodies Future Builds team, I supported the metrology systems that use
       <strong>Leica laser trackers</strong> to measure and align fuselage mid-body sections during assembly. My work spanned four connected projects.
     </p>
 
-    <h3>New Systems Integration</h3>
+    <h3 class="cs-head">My Role</h3>
+    <p class="cs-role">Equipment Engineering intern on the 777X Mid-Bodies Future Builds team, working across hardware, software, and HMI for the metrology kiosks.</p>
+
+    <h3 class="cs-head">Approach</h3>
+    <h4 class="cs-sub">New Systems Integration</h4>
     <p>
       Led the upgrade of legacy metrology kiosks from Windows 7 to Windows 10: installing and configuring metrology and automation
       software, resolving WinCC deployment issues, and configuring the network between laser trackers, SPM tablets, and backend PCs,
       followed by system validation and hardware integration testing.
     </p>
 
-    <h3>OPC Interface Migration</h3>
+    <h4 class="cs-sub">OPC Interface Migration</h4>
     <p>
       Rewrote one-third of the legacy HMI commands from the AgileSA interface to their ObjectiveSA equivalents in <strong>C#</strong>,
       supporting the move to a new Spatial Analyzer version, and built a test bench of command and target sequences to validate communication
       between the HMI and Spatial Analyzer.
     </p>
 
-    <h3>HMI Redesign</h3>
+    <h4 class="cs-sub">HMI Redesign</h4>
     <p>
       Redesigned Siemens WinCC operator panels to separate critical data from supporting detail, and implemented certification checks
       that prevent operation when required tool certifications have expired.
     </p>
 
-    <h3>Workstation Mounting & Power Reliability</h3>
+    <h4 class="cs-sub">Workstation Mounting & Power Reliability</h4>
     <p>
       Designed a clamp-style PC mounting bracket in <strong>CATIA V5</strong>, prototyped with 3D printing, to secure new workstations in
       existing kiosks with minimal hardware. Evaluated a Siemens SITOP UPS architecture for automated buffering and shutdown, and built
       a sizing tool to select UPS and battery configurations.
     </p>
 
-    <h3>Results</h3>
+    <h3 class="cs-head">Results</h3>
     <ul>
       <li><strong>90%</strong> reduction in workstation data-loss and corruption risk</li>
       <li><strong>3</strong> metrology kiosks migrated and validated for production</li>
@@ -721,14 +768,14 @@
 
     <div class="carousel">
         <div class="carousel-main">
-            <img src="web/tray.jpg" class="active" alt="Seat Tray 1">
-            <img src="web/tray3.jpg" alt="Seat Tray 2" style="display: none;">
-            <img src="web/tray4.jpg" alt="Seat Tray 3" style="display: none;">
+            <img loading="lazy" src="web/tray.jpg" class="active" alt="Seat Tray 1">
+            <img loading="lazy" src="web/tray3.jpg" alt="Seat Tray 2" style="display: none;">
+            <img loading="lazy" src="web/tray4.jpg" alt="Seat Tray 3" style="display: none;">
         </div>
         <div class="carousel-thumbs">
-            <img src="web/tray.jpg" alt="Seat Tray 1" class="active-thumb">
-            <img src="web/tray3.jpg" alt="Seat Tray 2">
-            <img src="web/tray4.jpg" alt="Seat Tray 3">
+            <img loading="lazy" src="web/tray.jpg" alt="Seat Tray 1" class="active-thumb">
+            <img loading="lazy" src="web/tray3.jpg" alt="Seat Tray 2">
+            <img loading="lazy" src="web/tray4.jpg" alt="Seat Tray 3">
         </div>
     </div>
 
@@ -740,7 +787,7 @@
         <span class="tag">Design for Manufacturing (DFM)</span>
     </div>
 
-    <h3>Project Overview</h3>
+    <h3 class="cs-head">Problem</h3>
     <p>
       As part of Boeing’s 3-day BCA ONE Intern Design-A-Thon, I joined a team of three to tackle a challenge centered around
       improving the <strong>passenger flight experience</strong>. Our goal was to enhance comfort and convenience for economy-class passengers
@@ -753,7 +800,11 @@
       during turbulence. This creates a poor passenger experience and, in some cases, safety concerns from spilled hot beverages.
     </p>
 
-    <h3>Concept Development</h3>
+    <h3 class="cs-head">My Role</h3>
+    <p class="cs-role">Member of a Boeing intern team in a 3-day design-a-thon; contributed to the concept, CATIA model, and 1:1 prototype.</p>
+
+    <h3 class="cs-head">Approach</h3>
+    <h4 class="cs-sub">Concept Development</h4>
     <p>
       With that insight, we reimagined the existing seat tray by integrating a <strong>collapsible cup holder</strong> inspired by
       hiking and camping cup designs. The collapsible feature allows it to fit within the tray’s original dimensions when stowed,
@@ -768,7 +819,7 @@
       personalization without additional parts or materials.
     </p>
 
-    <h3>Design Strategy</h3>
+    <h4 class="cs-sub">Design Strategy</h4>
     <p>
       One of our main constraints was ensuring the design remained <strong>retrofit-compatible</strong>. By maintaining the original
       tray dimensions and hinge system, airlines could easily replace existing trays with our new design once their current ones
@@ -776,7 +827,8 @@
       practicality</strong>, making the design both attractive and feasible for manufacturers.
     </p>
 
-    <h3>Prototyping & Results</h3>
+    <h3 class="cs-head">Results</h3>
+    <h4 class="cs-sub">Prototyping & Results</h4>
     <p>
       Given the short timeline, we worked efficiently by brainstorming, designing, and fabricating a <strong>1:1 functional prototype</strong>
       within just a day and a half at Boeing’s Integration Center. The prototype showcased the collapsible mechanism, phone stand,
@@ -784,7 +836,7 @@
       and designers, earning <strong>2nd place</strong> in the competition for innovation and user-centered design.
     </p>
 
-    <h3>Reflection</h3>
+    <h4 class="cs-sub">Reflection</h4>
     <p>
       This project reinforced the importance of <strong>balancing creativity with manufacturability</strong>. It also showed how
       user-centered thinking can uncover meaningful improvements in everyday designs, even in something as common as an airplane
@@ -802,16 +854,16 @@
 
     <div class="carousel">
         <div class="carousel-main">
-            <img src="web/avionics.jpg" class="active" alt="Avionics 1">
-            <img src="web/avionics4.jpg" alt="Avionics 2" style="display: none;">
-            <img src="web/avionics2.jpg" alt="Avionics 3" style="display: none;">
-            <img src="avionics3.png" alt="Avionics 4" style="display: none;">
+            <img loading="lazy" src="web/avionics.jpg" class="active" alt="Avionics 1">
+            <img loading="lazy" src="web/avionics4.jpg" alt="Avionics 2" style="display: none;">
+            <img loading="lazy" src="web/avionics2.jpg" alt="Avionics 3" style="display: none;">
+            <img loading="lazy" src="avionics3.png" alt="Avionics 4" style="display: none;">
         </div>
         <div class="carousel-thumbs">
-            <img src="web/avionics.jpg" alt="Avionics 1" class="active-thumb">
-            <img src="web/avionics4.jpg" alt="Avionics 2">
-            <img src="web/avionics2.jpg" alt="Avionics 3">
-            <img src="avionics3.png" alt="Avionics 4">
+            <img loading="lazy" src="web/avionics.jpg" alt="Avionics 1" class="active-thumb">
+            <img loading="lazy" src="web/avionics4.jpg" alt="Avionics 2">
+            <img loading="lazy" src="web/avionics2.jpg" alt="Avionics 3">
+            <img loading="lazy" src="avionics3.png" alt="Avionics 4">
         </div>
     </div>
 
@@ -823,7 +875,7 @@
         <span class="tag">Design for Manufacturing (DFM)</span>
     </div>
 
-    <h3>Project Overview</h3>
+    <h3 class="cs-head">Problem</h3>
     <p>
       As part of the <strong>ASCEND Autonomous Systems Research Team</strong>, I was responsible for designing an
       <strong>avionics enclosure</strong> for our ATV’s critical flight electronics, including the Pixhawk flight
@@ -832,7 +884,7 @@
       fitting seamlessly within the limited space of the vehicle chassis.
     </p>
 
-    <h3>Design Challenge</h3>
+    <h4 class="cs-sub">Design Challenge</h4>
     <p>
       The enclosure had to satisfy multiple engineering constraints simultaneously: <strong>electromagnetic compatibility</strong> between
       high-frequency components (such as the Raspberry Pi) and navigation systems, <strong>thermal regulation</strong> to prevent overheating,
@@ -840,7 +892,11 @@
       Furthermore, each subsystem required clear wire routing and access for maintenance without compromising protection.
     </p>
 
-    <h3>Design Process</h3>
+    <h3 class="cs-head">My Role</h3>
+    <p class="cs-role">Originated the concept and designed the first-generation enclosure in OnShape, then fabricated it from laser-cut panels.</p>
+
+    <h3 class="cs-head">Approach</h3>
+    <h4 class="cs-sub">Design Process</h4>
     <p>
       I began by modeling each electronic component in <strong>SolidWorks</strong> and mapping the physical wiring layout
       to ensure optimal cable management and clearance. The design evolved into a <strong>multi-compartment box</strong>,
@@ -862,7 +918,7 @@
       both performance and safety by isolating the GPS from EMI sources while optimizing reception.
     </p>
 
-    <h3>Prototyping & Fabrication</h3>
+    <h4 class="cs-sub">Prototyping & Fabrication</h4>
     <p>
       Once the 3D model was validated through spatial fit checks, I exported the 2D profiles for laser cutting and
       assembled the prototype to verify dimensional accuracy and airflow effectiveness. The modular dovetail joints
@@ -870,7 +926,8 @@
       troubleshooting.
     </p>
 
-    <h3>Outcome & Impact</h3>
+    <h3 class="cs-head">Results</h3>
+    <h4 class="cs-sub">Outcome & Impact</h4>
     <p>
       The final design provided a <strong>lightweight, EMI-resistant, and serviceable avionics housing</strong> that
       integrated seamlessly into the ASCEND ATV platform. It improved cable management efficiency, reduced EMI interference
@@ -889,14 +946,14 @@
 
     <div class="carousel">
         <div class="carousel-main">
-            <img src="web/removal.jpg" class="active" alt="Removal 1">
-            <img src="web/removal2.jpg" alt="Removal 2" style="display: none;">
-            <img src="web/removal3.jpg" alt="Removal 3" style="display: none;">
+            <img loading="lazy" src="web/removal.jpg" class="active" alt="Removal 1">
+            <img loading="lazy" src="web/removal2.jpg" alt="Removal 2" style="display: none;">
+            <img loading="lazy" src="web/removal3.jpg" alt="Removal 3" style="display: none;">
         </div>
         <div class="carousel-thumbs">
-            <img src="web/removal.jpg" alt="Removal 1" class="active-thumb">
-            <img src="web/removal2.jpg" alt="Removal 2">
-            <img src="web/removal3.jpg" alt="Removal 3">
+            <img loading="lazy" src="web/removal.jpg" alt="Removal 1" class="active-thumb">
+            <img loading="lazy" src="web/removal2.jpg" alt="Removal 2">
+            <img loading="lazy" src="web/removal3.jpg" alt="Removal 3">
         </div>
     </div>
 
@@ -906,7 +963,7 @@
         <span class="tag">System Layout & Optimization</span>
     </div>
 
-    <h3>Project Overview</h3>
+    <h3 class="cs-head">Problem</h3>
     <p>
       As part of the <strong>ASCEND Autonomous Systems Research Team</strong>, our group was tasked with transitioning our
       <strong>Autonomous Test Vehicle (ATV)</strong> from a gasoline-powered drivetrain to a fully electric propulsion system.
@@ -914,7 +971,7 @@
       where the use of internal combustion engines was restricted for safety and environmental reasons.
     </p>
 
-    <h3>Team Objective</h3>
+    <h4 class="cs-sub">Team Objective</h4>
     <p>
       Working as part of a <strong>three-person mechanical integration team</strong>, I helped lead the effort to
       <strong>remove the existing gas engine</strong> while maintaining the structural and electrical integrity of the platform.
@@ -923,7 +980,11 @@
       reinstallation reference.
     </p>
 
-    <h3>Process & Safety</h3>
+    <h3 class="cs-head">My Role</h3>
+    <p class="cs-role">Led the gas engine removal as a Mechanical Design & Production Engineer on ASCEND Texas.</p>
+
+    <h3 class="cs-head">Approach</h3>
+    <h4 class="cs-sub">Process & Safety</h4>
     <p>
       The removal process began with a detailed system review of the ATV’s <strong>fuel and electrical subsystems</strong> to
       identify all active circuits and potential hazards. I assisted in <strong>depressurizing the fuel system</strong>,
@@ -938,7 +999,8 @@
       chassis to remove residual fuel and oil, making the frame safe for electronics installation.
     </p>
 
-    <h3>Outcome & Preparation for Electrification</h3>
+    <h3 class="cs-head">Results</h3>
+    <h4 class="cs-sub">Outcome & Preparation for Electrification</h4>
     <p>
       The gas engine removal was successfully completed without any structural damage or contamination incidents. The cleaned
       and documented chassis was officially cleared for use in the <strong>electrification phase</strong> of the ASCEND project.
@@ -964,10 +1026,10 @@
         <!-- Main display area -->
         <div class="carousel-main">
             <!-- Default first item -->
-            <img src="web/emotor.jpg" class="active" alt="E-Motor 1">
-            <img src="web/emotor7.jpg" alt="E-Motor 2" style="display:none;">
-            <img src="web/emotor6.jpg" alt="E-Motor 3B" style="display:none;">
-            <img src="web/emotor5.jpg" alt="E-Motor 4" style="display:none;">
+            <img loading="lazy" src="web/emotor.jpg" class="active" alt="E-Motor 1">
+            <img loading="lazy" src="web/emotor7.jpg" alt="E-Motor 2" style="display:none;">
+            <img loading="lazy" src="web/emotor6.jpg" alt="E-Motor 3B" style="display:none;">
+            <img loading="lazy" src="web/emotor5.jpg" alt="E-Motor 4" style="display:none;">
             
             <!-- All other media pre-loaded but hidden -->
             <video muted playsinline style="display: none;">
@@ -976,7 +1038,7 @@
             <video muted playsinline style="display: none;">
                 <source src="web/emotor4.mp4" type="video/mp4">
             </video>
-            <img src="web/emotor3.jpg" alt="E-Motor 3" style="display: none;">
+            <img loading="lazy" src="web/emotor3.jpg" alt="E-Motor 3" style="display: none;">
             <video muted playsinline style="display: none;">
                 <source src="web/emotor2.mp4" type="video/mp4">
             </video>
@@ -984,13 +1046,13 @@
     
         <!-- Thumbnails / selectors -->
         <div class="carousel-thumbs">
-            <img src="web/emotor.jpg" alt="E-Motor 1" class="active-thumb">
-            <img src="web/emotor7.jpg" alt="E-Motor 2">
-            <img src="web/emotor6.jpg" alt="E-Motor 3B">
-            <img src="web/emotor5.jpg" alt="E-Motor 4">
+            <img loading="lazy" src="web/emotor.jpg" alt="E-Motor 1" class="active-thumb">
+            <img loading="lazy" src="web/emotor7.jpg" alt="E-Motor 2">
+            <img loading="lazy" src="web/emotor6.jpg" alt="E-Motor 3B">
+            <img loading="lazy" src="web/emotor5.jpg" alt="E-Motor 4">
             <video src="web/emotor.mp4" muted playsinline></video>
             <video src="web/emotor4.mp4" muted playsinline></video>
-            <img src="web/emotor3.jpg" alt="E-Motor 3">
+            <img loading="lazy" src="web/emotor3.jpg" alt="E-Motor 3">
             <video src="web/emotor2.mp4" muted playsinline></video>
         </div>
     </div>
@@ -1003,7 +1065,7 @@
       <span class="tag">System Integration</span>
     </div>
 
-    <h3>Project Overview</h3>
+    <h3 class="cs-head">Problem</h3>
         <p>
           As part of the <strong>ASCEND Autonomous Systems Research Team</strong>, I contributed to the design and 
           implementation of the <strong>electric motor system</strong> for the ATV, marking a major milestone in our 
@@ -1012,7 +1074,11 @@
           integration with the new powertrain architecture.
         </p>
     
-        <h3>Research & Motor Selection</h3>
+        <h3 class="cs-head">My Role</h3>
+    <p class="cs-role">Designed and welded the motor mount, and led the motor, battery, and controller installation.</p>
+
+    <h3 class="cs-head">Approach</h3>
+    <h4 class="cs-sub">Research & Motor Selection</h4>
         <p>
           We began by researching available <strong>electric motors</strong> capable of providing sufficient power to 
           reach the ATV’s target speed of approximately <strong>30 mph</strong>. The challenge was identifying a model 
@@ -1027,7 +1093,7 @@
           stable orientation.
         </p>
     
-        <h3>Design & Mounting Strategy</h3>
+        <h4 class="cs-sub">Design & Mounting Strategy</h4>
         <p>
           We explored multiple <strong>mounting configurations</strong> to integrate the motor within the limited space 
           of the ATV’s chassis. Early prototypes were constructed using <strong>cardboard and mockups</strong> to test 
@@ -1043,7 +1109,7 @@
           battery modules</strong>, while maintaining precise chain alignment and minimizing vibration.
         </p>
     
-        <h3>Prototype & Structural Integration</h3>
+        <h4 class="cs-sub">Prototype & Structural Integration</h4>
         <p>
           The final design consisted of a pair of <strong>C-channel aluminum rails</strong> supporting the custom motor 
           plate. These rails acted like a <strong>drawer system</strong>, enabling slight sliding adjustment during alignment 
@@ -1059,7 +1125,8 @@
           operational vibration.
         </p>
     
-        <h3>Outcome & Impact</h3>
+        <h3 class="cs-head">Results</h3>
+    <h4 class="cs-sub">Outcome & Impact</h4>
         <p>
           The implemented design provided a <strong>lightweight, compact, and serviceable solution</strong> for housing 
           the new electric motor. The suspended mounting system maximized frame space utilization, improved drivetrain 
@@ -1083,16 +1150,16 @@
 
     <div class="carousel">
         <div class="carousel-main">
-            <img src="hand.png" class="active" alt="Robotic Hand 1">
-            <img src="hand2.png" alt="Robotic Hand 2" style="display: none;">
-            <img src="hand3.png" alt="Robotic Hand 3" style="display: none;">
-            <img src="hand4.png" alt="Robotic Hand 4" style="display: none;">
+            <img loading="lazy" src="hand.png" class="active" alt="Robotic Hand 1">
+            <img loading="lazy" src="hand2.png" alt="Robotic Hand 2" style="display: none;">
+            <img loading="lazy" src="hand3.png" alt="Robotic Hand 3" style="display: none;">
+            <img loading="lazy" src="hand4.png" alt="Robotic Hand 4" style="display: none;">
         </div>
         <div class="carousel-thumbs">
-            <img src="hand.png" alt="Robotic Hand 1" class="active-thumb">
-            <img src="hand2.png" alt="Robotic Hand 2">
-            <img src="hand3.png" alt="Robotic Hand 3">
-            <img src="hand4.png" alt="Robotic Hand 4">
+            <img loading="lazy" src="hand.png" alt="Robotic Hand 1" class="active-thumb">
+            <img loading="lazy" src="hand2.png" alt="Robotic Hand 2">
+            <img loading="lazy" src="hand3.png" alt="Robotic Hand 3">
+            <img loading="lazy" src="hand4.png" alt="Robotic Hand 4">
         </div>
     </div>
 
@@ -1104,7 +1171,7 @@
         <span class="tag">Design for Manufacturing</span>
     </div>
 
-    <h3>Project Overview</h3>
+    <h3 class="cs-head">Problem</h3>
     <p>
       Motivated by a deep curiosity for <strong>humanoid robotics</strong> and accessible engineering design,
       I initiated a self-driven project to create a <strong>3D-printed robotic hand</strong> that could be
@@ -1113,7 +1180,11 @@
       dedicated to developing custom-engineered devices for the disabled community at no cost.
     </p>
 
-    <h3>Design Concept</h3>
+    <h3 class="cs-head">My Role</h3>
+    <p class="cs-role">Self-directed personal project: all concept work and CAD in OnShape. Currently at the CAD stage.</p>
+
+    <h3 class="cs-head">Approach</h3>
+    <h4 class="cs-sub">Design Concept</h4>
     <p>
       The robotic hand was modeled entirely in <strong>OnShape</strong> using a biomimetic design approach inspired
       by the human hand’s tendon-driven motion. Instead of using rigid linkages, I implemented <strong>fishing line–based
@@ -1129,7 +1200,7 @@
       freed up space for future sensor integration and improved wiring management.
     </p>
 
-    <h3>Engineering Development</h3>
+    <h4 class="cs-sub">Engineering Development</h4>
     <p>
       The current CAD assembly includes all mechanical linkages, cable routing paths, and potential mounting points
       for electronics and actuators. My ongoing research focuses on <strong>sensor integration</strong> to enable
@@ -1148,7 +1219,8 @@
       to emulate human biomechanics while maintaining accessibility for low-cost fabrication.
     </p>
 
-    <h3>Research Challenges & Future Work</h3>
+    <h3 class="cs-head">Results</h3>
+    <h4 class="cs-sub">Research Challenges & Future Work</h4>
     <p>
       This project has involved extensive research into <strong>actuator placement trade-offs</strong>,
       <strong>space constraints</strong>, and the <strong>integration of sensors into small-scale mechanisms</strong>.
@@ -1157,7 +1229,7 @@
       prosthetic or robotic systems.
     </p>
 
-    <h3>Outcome & Impact</h3>
+    <h4 class="cs-sub">Outcome & Impact</h4>
     <p>
       The project is currently at the CAD stage, but it has already provided valuable insights into mechanical
       design optimization, additive manufacturing techniques, and human–machine interaction principles. By open-sourcing
@@ -1183,18 +1255,18 @@
             </video>
             
             <!-- All other media pre-loaded but hidden -->
-            <img src="web/bowling.jpg" alt="Prototype" style="display: none;">
+            <img loading="lazy" src="web/bowling.jpg" alt="Prototype" style="display: none;">
             <video muted playsinline style="display: none;">
                 <source src="web/bowling2.mp4" type="video/mp4">
             </video>
-            <img src="web/bowling2.jpg" alt="Prototype" style="display: none;">
-            <img src="bowling6.png" alt="Drawing" style="display: none;">
-            <img src="bowling7.png" alt="Kinematics" style="display: none;">
+            <img loading="lazy" src="web/bowling2.jpg" alt="Prototype" style="display: none;">
+            <img loading="lazy" src="bowling6.png" alt="Drawing" style="display: none;">
+            <img loading="lazy" src="bowling7.png" alt="Kinematics" style="display: none;">
             <video muted playsinline style="display: none;">
                 <source src="web/bowling5.mp4" type="video/mp4">
             </video>
-            <img src="bowling.gif" alt="Motion" style="display: none;">
-            <img src="web/rccar7.jpg" alt="Kinematics" style="display: none;">
+            <img loading="lazy" src="bowling.gif" alt="Motion" style="display: none;">
+            <img loading="lazy" src="web/rccar7.jpg" alt="Kinematics" style="display: none;">
             <video muted playsinline style="display: none;">
                 <source src="web/bowling3.mp4" type="video/mp4">
             </video>
@@ -1204,28 +1276,28 @@
             <video muted playsinline style="display: none;">
                 <source src="bowling6.mp4" type="video/mp4">
             </video>
-            <img src="bowling9.png" alt="Kinematics" style="display: none;">
-            <img src="bowling10.png" alt="Kinematics" style="display: none;">
-            <img src="bowling11.png" alt="Kinematics" style="display: none;">
+            <img loading="lazy" src="bowling9.png" alt="Kinematics" style="display: none;">
+            <img loading="lazy" src="bowling10.png" alt="Kinematics" style="display: none;">
+            <img loading="lazy" src="bowling11.png" alt="Kinematics" style="display: none;">
         </div>
     
         <!-- Thumbnails / selectors -->
         <div class="carousel-thumbs">
             <video src="web/bowling.mp4" muted playsinline class="active-thumb"></video>
-            <img src="web/bowling.jpg" alt="Prototype">
+            <img loading="lazy" src="web/bowling.jpg" alt="Prototype">
             <video src="web/bowling2.mp4" muted playsinline></video>
-            <img src="web/bowling2.jpg" alt="Prototype">
-            <img src="bowling6.png" alt="Drawing">
-            <img src="bowling7.png" alt="Kinematics">
+            <img loading="lazy" src="web/bowling2.jpg" alt="Prototype">
+            <img loading="lazy" src="bowling6.png" alt="Drawing">
+            <img loading="lazy" src="bowling7.png" alt="Kinematics">
             <video src="web/bowling5.mp4" muted playsinline></video>
-            <img src="bowling.gif" alt="Motion">
-            <img src="web/rccar7.jpg" alt="Alley">
+            <img loading="lazy" src="bowling.gif" alt="Motion">
+            <img loading="lazy" src="web/rccar7.jpg" alt="Alley">
             <video src="web/bowling3.mp4" muted playsinline></video>
             <video src="web/bowling4.mp4" muted playsinline></video>
             <video src="bowling6.mp4" muted playsinline></video>
-            <img src="bowling9.png" alt="Kinematics">
-            <img src="bowling10.png" alt="Kinematics">
-            <img src="bowling11.png" alt="Kinematics">
+            <img loading="lazy" src="bowling9.png" alt="Kinematics">
+            <img loading="lazy" src="bowling10.png" alt="Kinematics">
+            <img loading="lazy" src="bowling11.png" alt="Kinematics">
         </div>
     </div>
 
@@ -1237,7 +1309,7 @@
         <span class="tag">Python</span>
     </div>
 
-    <h3>Project Overview</h3>
+    <h3 class="cs-head">Problem</h3>
     <p>
       As the final project for my <strong>Robotic Mechanism Design</strong> course, our team was challenged to design
       and prototype a complex linkage mechanism capable of producing a controlled and purposeful motion. We developed a
@@ -1246,7 +1318,7 @@
       bowling ball toward the pins.
     </p>
 
-    <h3>Concept & Design Motivation</h3>
+    <h4 class="cs-sub">Concept & Design Motivation</h4>
     <p>
       We began by studying the biomechanics of a bowling throw and translating those into mechanical linkages that could
       achieve similar kinematic profiles. Using <strong>MotionGen</strong>, we modeled and optimized linkage dimensions
@@ -1260,7 +1332,11 @@
       producing a consistent “release” point with angular acceleration suitable for accurate bowling throws.
     </p>
 
-    <h3>Mathematical & Simulation Analysis</h3>
+    <h3 class="cs-head">My Role</h3>
+    <p class="cs-role">Robotics Mechanism Design course project: designed the four-bar linkage and scoop end-effector and built the working prototype.</p>
+
+    <h3 class="cs-head">Approach</h3>
+    <h4 class="cs-sub">Mathematical & Simulation Analysis</h4>
     <p>
       To validate the theoretical design, we performed a full <strong>kinematic analysis</strong> in MATLAB. By solving the
       geometric constraint equations of the four-bar linkage, we simulated and animated the motion profile, confirming the
@@ -1269,14 +1345,14 @@
       timing for the flick motion.
     </p>
 
-    <h3>Actuation & Control</h3>
+    <h4 class="cs-sub">Actuation & Control</h4>
     <p>
       The linkage was powered by a <strong>rotary actuator</strong> programmed to complete exactly one revolution per button
       press. This ensured that each throw was consistent and that the system would reset automatically for the next bowl.
       Adjusting the actuator’s speed allowed us to control the throwing strength while maintaining mechanical safety.
     </p>
 
-    <h3>“Smile & Frown” Release Mechanism</h3>
+    <h4 class="cs-sub">“Smile & Frown” Release Mechanism</h4>
     <p>
       To accurately replicate the human wrist flick, we designed a custom <strong>scoop-shaped end effector</strong>,
       nicknamed the <strong>“Smile & Frown”</strong>. The scoop’s rear section followed a concave “smile” <code>)</code> profile
@@ -1285,7 +1361,7 @@
       until optimal momentum was achieved, ensuring smooth and consistent throws.
     </p>
 
-    <h3>Fabrication & Material Selection</h3>
+    <h4 class="cs-sub">Fabrication & Material Selection</h4>
     <p>
       The prototype was constructed using a combination of <strong>laser-cut acrylic</strong> and <strong>wood</strong> for
       structural balance and surface optimization. The <strong>linkages</strong> and the top surface of the bowling alley were
@@ -1300,7 +1376,8 @@
       printer, allowing for uniform geometry and scalable replication for future class projects.
     </p>
 
-    <h3>Outcome & Reflection</h3>
+    <h3 class="cs-head">Results</h3>
+    <h4 class="cs-sub">Outcome & Reflection</h4>
     <p>
       The final mechanism successfully reproduced the combined spin and flick motion of a human bowler. The simulated
       results aligned closely with physical testing, validating both the mathematical model and fabrication accuracy.
@@ -1323,18 +1400,18 @@
 
     <div class="carousel">
         <div class="carousel-main">
-            <img src="web/rccar.jpg" class="active" alt="RC Car 1">
-            <img src="web/rccar2.jpg" alt="RC Car 2" style="display: none;">
-            <img src="web/rccar3.jpg" alt="RC Car 3" style="display: none;">
-            <img src="web/rccar4.jpg" alt="RC Car 4" style="display: none;">
-            <img src="web/rccar6.jpg" alt="RC Car 6" style="display: none;">
+            <img loading="lazy" src="web/rccar.jpg" class="active" alt="RC Car 1">
+            <img loading="lazy" src="web/rccar2.jpg" alt="RC Car 2" style="display: none;">
+            <img loading="lazy" src="web/rccar3.jpg" alt="RC Car 3" style="display: none;">
+            <img loading="lazy" src="web/rccar4.jpg" alt="RC Car 4" style="display: none;">
+            <img loading="lazy" src="web/rccar6.jpg" alt="RC Car 6" style="display: none;">
         </div>
         <div class="carousel-thumbs">
-            <img src="web/rccar.jpg" alt="RC Car 1" class="active-thumb">
-            <img src="web/rccar2.jpg" alt="RC Car 2">
-            <img src="web/rccar3.jpg" alt="RC Car 3">
-            <img src="web/rccar4.jpg" alt="RC Car 4">
-            <img src="web/rccar6.jpg" alt="RC Car 6">
+            <img loading="lazy" src="web/rccar.jpg" alt="RC Car 1" class="active-thumb">
+            <img loading="lazy" src="web/rccar2.jpg" alt="RC Car 2">
+            <img loading="lazy" src="web/rccar3.jpg" alt="RC Car 3">
+            <img loading="lazy" src="web/rccar4.jpg" alt="RC Car 4">
+            <img loading="lazy" src="web/rccar6.jpg" alt="RC Car 6">
         </div>
     </div>
 
@@ -1345,7 +1422,7 @@
         <span class="tag">Python</span>
     </div>
 
-    <h3>Project Overview</h3>
+    <h3 class="cs-head">Problem</h3>
     <p>
       As part of the <strong>Robotic Mechanism Design</strong> course, my team, <strong>“The Decepticons”</strong>,
       was challenged to design and build a <strong>remote-controlled vehicle</strong> using a set of two powered actuators
@@ -1353,7 +1430,11 @@
       to develop a functional RC car capable of both manual and autonomous motion.
     </p>
 
-    <h3>Mechanical Design</h3>
+    <h3 class="cs-head">My Role</h3>
+    <p class="cs-role">Class team project: designed the chassis in SolidWorks, built the servo-motor circuit, and programmed the autonomous movements.</p>
+
+    <h3 class="cs-head">Approach</h3>
+    <h4 class="cs-sub">Mechanical Design</h4>
     <p>
       Our first step was to model the <strong>vehicle chassis</strong> in <strong>SolidWorks</strong>, ensuring it provided
       adequate space for the motors, control board, and battery pack while maintaining a lightweight structure for
@@ -1368,7 +1449,7 @@
       look that showcased the internal electronics.
     </p>
 
-    <h3>Electrical & Control System</h3>
+    <h4 class="cs-sub">Electrical & Control System</h4>
     <p>
       We designed and assembled the <strong>electrical circuit</strong> responsible for driving the two actuator-powered
       wheels. The system included a <strong>microcontroller board</strong>, <strong>motor drivers</strong>, and a compact
@@ -1388,14 +1469,15 @@
       The circuit was compact, modular, and easy to reconfigure for future testing or additional sensors.
     </p>
 
-    <h3>Fabrication & Assembly</h3>
+    <h4 class="cs-sub">Fabrication & Assembly</h4>
     <p>
       The entire structure was <strong>laser-cut from acrylic sheets</strong> and assembled using friction-fit tabs and
       fasteners. This approach allowed easy maintenance and rapid iteration during testing. The acrylic chassis not only
       provided a professional finish but also allowed us to visualize and debug the electronic connections in real time.
     </p>
 
-    <h3>Outcome & Reflection</h3>
+    <h3 class="cs-head">Results</h3>
+    <h4 class="cs-sub">Outcome & Reflection</h4>
     <p>
       The final RC car successfully met all project requirements and exceeded expectations with its reliable circular motion
       and responsive joystick control. The integrated design showcased a complete <strong>mechatronic system</strong> —
@@ -1438,7 +1520,7 @@
         <span class="tag">Prototyping & Fabrication</span>
     </div>
 
-    <h3>Project Overview</h3>
+    <h3 class="cs-head">Problem</h3>
     <p>
       As part of a hands-on module in <strong>Robotic Mechanism Design</strong>, I constructed a
       <strong>slider-crank mechanism</strong> capable of manually lifting a one-pound weight. The purpose of this project
@@ -1446,7 +1528,7 @@
       the inherent limitations and inefficiencies that arise in real-world assembly.
     </p>
 
-    <h3>Design & Objective</h3>
+    <h4 class="cs-sub">Design & Objective</h4>
     <p>
       The task focused on creating a functional slider-crank system that could be <strong>actuated by hand</strong>
       while maintaining minimal <strong>joint play and frictional losses</strong>. I designed the linkage to demonstrate
@@ -1454,7 +1536,11 @@
       why precision alignment and stiffness are critical in practical mechanism design.
     </p>
 
-    <h3>Performance & Optimization</h3>
+    <h3 class="cs-head">My Role</h3>
+    <p class="cs-role">Class project: designed in SolidWorks and fabricated from laser-cut parts.</p>
+
+    <h3 class="cs-head">Approach</h3>
+    <h4 class="cs-sub">Performance & Optimization</h4>
     <p>
       After assembling and calibrating the system, we achieved <strong>smooth, consistent motion</strong> with
       remarkably low mechanical backlash. By carefully selecting pivot clearances and verifying alignment through
@@ -1462,7 +1548,8 @@
       crank to efficiently lift the 1 lb load with minimal slippage.
     </p>
 
-    <h3>Outcome & Reflection</h3>
+    <h3 class="cs-head">Results</h3>
+    <h4 class="cs-sub">Outcome & Reflection</h4>
     <p>
       While simple in construction, the project highlighted the <strong>trade-offs between theoretical linkage efficiency
       and real-world mechanical losses</strong>. It reinforced the importance of material rigidity, tolerance matching,

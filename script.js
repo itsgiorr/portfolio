@@ -155,3 +155,23 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
+
+// ---------- PROJECT FILTERS ----------
+document.addEventListener('DOMContentLoaded', function () {
+    const buttons = document.querySelectorAll('.filter-btn');
+    const cards = document.querySelectorAll('.project-card[data-category]');
+    const moreTitle = document.querySelector('.more-projects-title');
+    buttons.forEach(btn => btn.addEventListener('click', () => {
+        const f = btn.dataset.filter;
+        buttons.forEach(b => b.classList.toggle('active', b === btn));
+        cards.forEach(c => {
+            const show = f === 'all' || c.dataset.category.split(' ').includes(f);
+            c.classList.toggle('is-hidden', !show);
+        });
+        if (moreTitle) {
+            const grid = moreTitle.nextElementSibling;
+            const anyVisible = grid && [...grid.querySelectorAll('.project-card')].some(c => !c.classList.contains('is-hidden'));
+            moreTitle.style.display = anyVisible ? '' : 'none';
+        }
+    }));
+});

@@ -1484,3 +1484,37 @@ body {
 .more-projects-title {
   margin-top: 4.5rem;
 }
+
+/* ---------- Hero stats ---------- */
+.hero-stats { display: flex; flex-wrap: nowrap; gap: 0.75rem; max-width: 560px; margin: 1.4rem 0 1.6rem; }
+.hero-stat { display: flex; flex-direction: column; flex: 1 1 0; min-width: 0; padding: 0.7rem 1rem;
+  border: 1px solid rgba(191, 87, 0, 0.45); border-radius: 12px; background: rgba(191, 87, 0, 0.08); }
+.hero-stat strong { color: var(--ut-orange); font-size: 1.5rem; line-height: 1.1; }
+.hero-stat span { color: #ddd; font-size: 0.78rem; line-height: 1.3; }
+.hero-buttons { flex-wrap: wrap; }
+.hero-buttons .btn i { margin-right: 0.35rem; }
+
+/* ---------- Project filters ---------- */
+.project-filters { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.6rem; margin: -0.5rem 0 2.5rem; }
+.filter-btn { font-family: inherit; font-size: 0.9rem; font-weight: 500; color: var(--white); background: transparent;
+  border: 1.5px solid rgba(191, 87, 0, 0.6); border-radius: 9999px; padding: 0.45rem 1.1rem; cursor: pointer; transition: all 0.2s ease; }
+.filter-btn:hover { border-color: var(--ut-orange); color: var(--ut-orange); }
+.filter-btn.active { background: var(--ut-orange); border-color: var(--ut-orange); color: var(--white); }
+.project-card.is-hidden { display: none !important; }
+
+/* ---------- Case-study modal structure ---------- */
+.modal-content h3.cs-head { color: var(--ut-orange); font-size: 1.3rem; margin-top: 1.8rem; padding-top: 1rem;
+  border-top: 1px solid rgba(191, 87, 0, 0.2); text-transform: none; }
+.modal-content h4.cs-sub { color: #333; font-size: 1.02rem; font-weight: 600; margin: 1rem 0 0.35rem; }
+.modal-content p.cs-role { border-left: 4px solid var(--ut-orange); background: rgba(191, 87, 0, 0.07);
+  padding: 0.7rem 1rem; border-radius: 6px; }
+
+/* ---------- Experience timeline ---------- */
+.timeline-content h4 { font-weight: 500; }
+.timeline-list { margin: 0.6rem 0 0; padding-left: 1.1rem; }
+.timeline-list li { color: #222; font-size: 0.93rem; line-height: 1.5; margin-bottom: 0.25rem; }
+
+@media (max-width: 768px) {
+  .hero-stats { flex-wrap: wrap; justify-content: center; }
+  .hero-stat { min-width: 120px; flex: 1 1 120px; }
+}
